@@ -1,48 +1,2663 @@
 <object-stream>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-  <declarations>m=com.sample.DroolsTest$Message@1dbbdf8(1); myMessage=Hello World(1)</declarations>
+  <activationId>Nogi [1]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Oczy [1]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [1]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [1]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Uszy [1]</activationId>
+  <rule>Uszy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [1]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [1]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Ogon [1]</activationId>
+  <rule>Ogon</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Skrzydla [1]</activationId>
+  <rule>Skrzydla</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rece [1]</activationId>
+  <rule>Rece</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [1]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [1]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [1]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [1]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [1]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [1]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>com.sample.DroolsTest$Message@1dbbdf8</objectToString>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-  <declarations>m=com.sample.DroolsTest$Message@1dbbdf8(1); myMessage=Hello World(1)</declarations>
+  <activationId>Rece [1]</activationId>
+  <rule>Rece</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>2</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@3668d4</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nogi [1]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Oczy [1]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [1]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [1]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Uszy [1]</activationId>
+  <rule>Uszy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [1]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [1]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Ogon [1]</activationId>
+  <rule>Ogon</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Skrzydla [1]</activationId>
+  <rule>Skrzydla</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [1]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [1]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [1]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [1]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [1]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Jezyk [1]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>1</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Rece [-1]</activationId>
+  <rule>Rece</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>4</factId>
+  <objectToString>com.sample.DroolsTest$Cecha@f11a1</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nogi [5]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Goodbye cruel world(1)</declarations>
+  <activationId>Oczy [5]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [5]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 5]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>ReceKolor [4, 5]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [5]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Uszy [5]</activationId>
+  <rule>Uszy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [5]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [5]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Ogon [5]</activationId>
+  <rule>Ogon</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Skrzydla [5]</activationId>
+  <rule>Skrzydla</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [5]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [5]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [5]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [5]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [5]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [5]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
-  <type>2</type>
-  <factId>1</factId>
-  <objectToString>com.sample.DroolsTest$Message@1dbbdf8</objectToString>
+  <type>1</type>
+  <factId>5</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Skrzydla [5]</activationId>
+  <rule>Skrzydla</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>6</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@10f1c3</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nogi [5]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Oczy [5]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [5]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 5]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>ReceKolor [4, 5]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [5]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Uszy [5]</activationId>
+  <rule>Uszy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [5]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [5]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Ogon [5]</activationId>
+  <rule>Ogon</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [5]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [5]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [5]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [5]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [5]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Jezyk [5]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(5)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>5</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-  <declarations>m=com.sample.DroolsTest$Message@1dbbdf8(1); myMessage=Goodbye cruel world(1)</declarations>
+  <activationId>Skrzydla [-1]</activationId>
+  <rule>Skrzydla</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>8</factId>
+  <objectToString>com.sample.DroolsTest$Cecha@1f10f2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nogi [9]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Oczy [9]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [9]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 9]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>ReceKolor [4, 9]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [9]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Uszy [9]</activationId>
+  <rule>Uszy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [9]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [9]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Ogon [9]</activationId>
+  <rule>Ogon</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>SkrzydlaKolor [8, 9]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [9]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [9]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [9]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [9]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [9]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [9]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>9</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Goodbye cruel world(1)</declarations>
+  <activationId>Ogon [9]</activationId>
+  <rule>Ogon</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>10</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@79d4b1</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nogi [9]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Goodbye cruel world(1)</declarations>
+  <type>5</type>
+  <activationId>Oczy [9]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [9]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 9]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>ReceKolor [4, 9]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [9]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Uszy [9]</activationId>
+  <rule>Uszy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [9]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [9]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>SkrzydlaKolor [8, 9]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [9]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [9]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [9]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [9]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [9]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Jezyk [9]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(9)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>9</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Ogon [-1]</activationId>
+  <rule>Ogon</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nogi [12]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Oczy [12]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [12]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 12]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>ReceKolor [4, 12]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [12]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Uszy [12]</activationId>
+  <rule>Uszy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [12]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [12]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>SkrzydlaKolor [8, 12]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [12]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [12]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [12]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [12]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [12]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [12]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>12</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Uszy [12]</activationId>
+  <rule>Uszy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>13</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@153d0f5</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nogi [12]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Oczy [12]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [12]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 12]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>ReceKolor [4, 12]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [12]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [12]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [12]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>SkrzydlaKolor [8, 12]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [12]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [12]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [12]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [12]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [12]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Jezyk [12]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(12)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>12</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Uszy [-1]</activationId>
+  <rule>Uszy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nogi [15]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Oczy [15]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [15]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 15]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>ReceKolor [4, 15]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [15]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [15]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [15]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>SkrzydlaKolor [8, 15]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [15]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [15]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [15]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [15]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [15]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [15]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>15</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Oczy [15]</activationId>
+  <rule>Oczy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>16</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@1a5b70d</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nogi [15]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [15]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 15]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>ReceKolor [4, 15]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [15]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [15]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [15]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>SkrzydlaKolor [8, 15]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [15]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [15]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [15]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [15]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [15]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Jezyk [15]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(15)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>15</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Oczy [-1]</activationId>
+  <rule>Oczy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nogi [18]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [18]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 18]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>ReceKolor [4, 18]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [18]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [18]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [18]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>SkrzydlaKolor [8, 18]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [18]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [18]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [18]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [18]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [18]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [18]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>18</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Nogi [18]</activationId>
+  <rule>Nogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>19</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@5ee75e</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [18]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 18]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>ReceKolor [4, 18]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [18]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [18]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [18]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>SkrzydlaKolor [8, 18]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [18]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [18]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [18]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [18]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [18]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Jezyk [18]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(18)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>18</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Nogi [-1]</activationId>
+  <rule>Nogi</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [21]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 21]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>ReceKolor [4, 21]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [21]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [21]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [21]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>SkrzydlaKolor [8, 21]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [21]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [21]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [21]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [21]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [21]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [21]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>21</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>SkrzydlaKolor [8, 21]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>22</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@17838a9</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [21]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 21]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>ReceKolor [4, 21]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [21]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [21]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [21]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [21]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [21]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [21]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [21]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [21]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Jezyk [21]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(21)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>21</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>SkrzydlaKolor [8, -1]</activationId>
+  <rule>SkrzydlaKolor</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>24</factId>
+  <objectToString>com.sample.DroolsTest$Cecha@e97ee5</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [25]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 25]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>ReceKolor [4, 25]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [25]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [25]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [25]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [25]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [25]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [25]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [25]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [25]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [25]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>25</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>ReceKolor [4, 25]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>26</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@c8e539</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [25]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 25]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [25]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [25]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [25]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [25]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [25]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [25]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [25]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [25]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Jezyk [25]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(25)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>25</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>ReceKolor [4, -1]</activationId>
+  <rule>ReceKolor</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>28</factId>
+  <objectToString>com.sample.DroolsTest$Cecha@f33b5d</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [29]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 29]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [29]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [29]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [29]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [29]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [29]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [29]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [29]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [29]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Jezyk [29]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>29</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Jezyk [29]</activationId>
+  <rule>Jezyk</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>30</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@8504fd</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [29]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 29]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [29]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [29]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [29]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [29]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [29]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [29]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [29]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wasy [29]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(29)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>29</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Jezyk [-1]</activationId>
+  <rule>Jezyk</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [32]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 32]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [32]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [32]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [32]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [32]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [32]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [32]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [32]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wasy [32]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>32</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Wasy [32]</activationId>
+  <rule>Wasy</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>33</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@13ba765</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [32]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 32]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [32]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [32]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [32]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [32]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [32]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [32]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Futro [32]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(32)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>32</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Wasy [-1]</activationId>
+  <rule>Wasy</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [35]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 35]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [35]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [35]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [35]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [35]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [35]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [35]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Futro [35]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>35</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Futro [35]</activationId>
+  <rule>Futro</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>36</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@1a302e0</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [35]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 35]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [35]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [35]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [35]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [35]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [35]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Piora [35]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(35)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>35</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Futro [-1]</activationId>
+  <rule>Futro</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [38]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 38]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [38]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [38]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [38]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [38]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [38]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Piora [38]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>38</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Piora [38]</activationId>
+  <rule>Piora</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>39</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@f68dff</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [38]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 38]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [38]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [38]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [38]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [38]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Dziob [38]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(38)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>38</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Piora [-1]</activationId>
+  <rule>Piora</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [41]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 41]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [41]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [41]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [41]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [41]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Dziob [41]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>41</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Dziob [41]</activationId>
+  <rule>Dziob</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>42</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@c3394b</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [41]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 41]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [41]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [41]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [41]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Bron [41]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(41)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>41</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Dziob [-1]</activationId>
+  <rule>Dziob</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [44]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 44]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [44]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [44]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [44]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Bron [44]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>44</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Bron [44]</activationId>
+  <rule>Bron</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>45</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@1ea52d4</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [44]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 44]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [44]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [44]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Rogi [44]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(44)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>44</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Bron [-1]</activationId>
+  <rule>Bron</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [47]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 47]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [47]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [47]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rogi [47]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>47</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Rogi [47]</activationId>
+  <rule>Rogi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>48</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@4ca3f6</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [47]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 47]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [47]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Nosi [47]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(47)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>47</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Rogi [-1]</activationId>
+  <rule>Rogi</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [50]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(50)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 50]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(50)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [50]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(50)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Nosi [50]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(50)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>50</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Nosi [50]</activationId>
+  <rule>Nosi</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(50)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>51</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@12a0c8</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [50]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(50)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 50]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(50)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Zeby [50]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(50)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>50</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Nosi [-1]</activationId>
+  <rule>Nosi</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [53]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(53)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 53]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(53)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Zeby [53]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(53)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>53</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Zeby [53]</activationId>
+  <rule>Zeby</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(53)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>54</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@13a45f1</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [53]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(53)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Pazury [4, 53]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(53)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>53</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Zeby [-1]</activationId>
+  <rule>Zeby</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [56]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(56)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Pazury [4, 56]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(56)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>56</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Pazury [4, 56]</activationId>
+  <rule>Pazury</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(56)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>57</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@25ced</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>5</type>
+  <activationId>Wzor [56]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(56)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>56</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Pazury [4, -1]</activationId>
+  <rule>Pazury</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>59</factId>
+  <objectToString>com.sample.DroolsTest$Cecha@22550a</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Wzor [60]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(60)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>60</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Wzor [60]</activationId>
+  <rule>Wzor</rule>
+  <declarations>w=com.sample.DroolsTest$Wyswietlanie@148b3d2(60)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>61</factId>
+  <objectToString>com.sample.DroolsTest$Pytanie@1e37a7e</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>60</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Wzor [-1]</activationId>
+  <rule>Wzor</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>63</factId>
+  <objectToString>com.sample.DroolsTest$Wyswietlanie@148b3d2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
 </object-stream>

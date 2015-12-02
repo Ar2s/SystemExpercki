@@ -1,20 +1,891 @@
 package com.sample
+
+import com.sample.DroolsTest.Wyswietlanie;
+import com.sample.DroolsTest.FormatOdp;
+import com.sample.DroolsTest.Pytanie;
+import com.sample.DroolsTest.Cecha;
+import java.util.List;
+import java.util.ArrayList;
  
-import com.sample.DroolsTest.Message;
- 
-rule "Hello World"
-    when
-        m : Message( status == Message.HELLO, myMessage : message )
-    then
-        System.out.println( myMessage );
-        m.setMessage( "Goodbye cruel world" );
-        m.setStatus( Message.GOODBYE );
-        update( m );
+query "Wyswielt"
+    w : Wyswietlanie();
 end
 
-rule "GoodBye"
+// ************************************
+//			PYTANIA
+
+rule "Nogi" salience 2
     when
-        Message( status == Message.GOODBYE, myMessage : message )
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Nogi");
     then
-        System.out.println( myMessage );
+    	insert(new Pytanie("Nogi"));
+        w.set("Czy twoj pokemon ma nogi?", "Nogi", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "NogiLiczba" salience 1
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Nogi");
+    	not Pytanie(tekst == "NogiLiczba");
+    then
+    	insert(new Pytanie("NogiLiczba"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("1");
+    		opcje.add("2");
+    		opcje.add("3");
+    		opcje.add("4");
+    		opcje.add("5");
+    		opcje.add("6");
+        w.set("Ile nog ma twoj pokemon?", "Nogi", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+rule "NogiKolor" salience 1
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Nogi");
+    	not Pytanie(tekst == "NogiKolor");
+    then
+    	insert(new Pytanie("NogiKolor"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("Zielonego");
+    		opcje.add("Pomaranczowego");
+    		opcje.add("Kremowego");
+    		opcje.add("Niebieskiego");
+    		opcje.add("Blekitnego");
+    		opcje.add("Czarnego");
+    		opcje.add("Bialego");
+    		opcje.add("Szarego");
+    		opcje.add("Rozowego");
+    		opcje.add("Brazowego");
+    		opcje.add("Fioletowego");
+    		opcje.add("Zoltego");
+        w.set("Jaki jest kolor nog twojego pokemona?", "NogiKoloru", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+
+rule "Oczy" salience 2
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Oczy");
+    then
+    	insert(new Pytanie("Oczy"));
+        w.set("Czy twoj pokemon ma oczy?", "Oczy", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "OczyLiczba" salience 1
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Oczy");
+    	not Pytanie(tekst == "OczyLiczba");
+    then
+    	insert(new Pytanie("OczyLiczba"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("1");
+    		opcje.add("2");
+    		opcje.add("3");
+    		opcje.add("4");
+        w.set("Ile oczu ma twoj pokemon?", "Oczy", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+rule "OkreslicKolorOczu" salience 2
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Oczy");
+    	not Pytanie(tekst == "OkreslicKolorOczu");
+    then
+    	insert(new Pytanie("OkreslicKolorOczu"));
+        w.set("Czy mozesz okreslic kolor oczu?", "OkreslicKolorOczu", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "OczyKolor" salience 2
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "OkreslicKolorOczu");
+    	not Pytanie(tekst == "OczyKolor");
+    then
+    	insert(new Pytanie("OczyKolor"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("Zielonego");
+    		opcje.add("Pomaranczowego");
+    		opcje.add("Kremowego");
+    		opcje.add("Niebieskiego");
+    		opcje.add("Blekitnego");
+    		opcje.add("Czarnego");
+    		opcje.add("Bialego");
+    		opcje.add("Szarego");
+    		opcje.add("Rozowego");
+    		opcje.add("Brazowego");
+    		opcje.add("Fioletowego");
+    		opcje.add("Zoltego");
+        w.set("Jaki jest kolor oczu ma twoj pokemona?", "OczyKoloru", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+rule "Wzor"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Wzor");
+    then
+    	insert(new Pytanie("Wzor"));
+        w.set("Czy twoj pokemon ma laty lub wzor?", "Wzor", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Pazury"
+    when
+    	w : Wyswietlanie();
+    	(or Cecha(tresc == "Rece");
+    		Cecha(tresc == "Nogi");
+    	)
+    	not Pytanie(tekst == "Pazury");
+    then
+    	insert(new Pytanie("Pazury"));
+        w.set("Czy twoj pokemon ma pazury?", "Pazury", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Zeby"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Zeby");
+    then
+    	insert(new Pytanie("Zeby"));
+        w.set("Czy twoj pokemon ma zeby?", "Zeby", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Uszy" salience 2
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Uszy");
+    then
+    	insert(new Pytanie("Uszy"));
+        w.set("Czy twoj pokemon ma uszy?", "Uszy", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "UszyKolor" salience 1
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Uszy");
+    	not Pytanie(tekst == "UszyKolor");
+    then
+    	insert(new Pytanie("UszyKolor"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("Zielonego");
+    		opcje.add("Pomaranczowego");
+    		opcje.add("Kremowego");
+    		opcje.add("Niebieskiego");
+    		opcje.add("Blekitnego");
+    		opcje.add("Czarnego");
+    		opcje.add("Bialego");
+    		opcje.add("Szarego");
+    		opcje.add("Rozowego");
+    		opcje.add("Brazowego");
+    		opcje.add("Fioletowego");
+    		opcje.add("Zoltego");
+        w.set("Jaki jest kolor uszu ma twoj pokemona?", "UszyKoloru", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+rule "Nosi"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Nosi");
+    then
+    	insert(new Pytanie("Nosi"));
+        w.set("Czy twoj pokemon cos nosi?", "Nosi", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Rogi" 
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Rogi");
+    then
+    	insert(new Pytanie("Rogi"));
+        w.set("Czy twoj pokemon ma rogi?", "Rogi", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "RogiKolor"
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Rogi");
+    	not Pytanie(tekst == "RogiKolor");
+    then
+    	insert(new Pytanie("RogiKolor"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("Zielonego");
+    		opcje.add("Pomaranczowego");
+    		opcje.add("Kremowego");
+    		opcje.add("Niebieskiego");
+    		opcje.add("Blekitnego");
+    		opcje.add("Czarnego");
+    		opcje.add("Bialego");
+    		opcje.add("Szarego");
+    		opcje.add("Rozowego");
+    		opcje.add("Brazowego");
+    		opcje.add("Fioletowego");
+    		opcje.add("Zoltego");
+        w.set("Jakiego koloru sa rogi/czulki?", "RogiKoloru", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+rule "Ogon" salience 2
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Ogon");
+    then
+    	insert(new Pytanie("Ogon"));
+        w.set("Czy twoj pokemon ma ogon?", "Ogon", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "OgonKolor" salience 1
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Ogon");
+    	not Pytanie(tekst == "OgonKolor");
+    then
+    	insert(new Pytanie("OgonKolor"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("Zielonego");
+    		opcje.add("Pomaranczowego");
+    		opcje.add("Kremowego");
+    		opcje.add("Niebieskiego");
+    		opcje.add("Blekitnego");
+    		opcje.add("Czarnego");
+    		opcje.add("Bialego");
+    		opcje.add("Szarego");
+    		opcje.add("Rozowego");
+    		opcje.add("Brazowego");
+    		opcje.add("Fioletowego");
+    		opcje.add("Zoltego");
+        w.set("Jakiego koloru jest ogon?", "OgonKoloru", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+rule "Skrzydla" salience 2
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Skrzydla");
+    then
+    	insert(new Pytanie("Skrzydla"));
+        w.set("Czy twoj pokemon ma skrzydla?", "Skrzydla", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "SkrzydlaKolor" salience 1
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Skrzydla");
+    	not Pytanie(tekst == "SkrzydlaKolor");
+    then
+    	insert(new Pytanie("SkrzydlaKolor"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("Zielonego");
+    		opcje.add("Pomaranczowego");
+    		opcje.add("Kremowego");
+    		opcje.add("Niebieskiego");
+    		opcje.add("Blekitnego");
+    		opcje.add("Czarnego");
+    		opcje.add("Bialego");
+    		opcje.add("Szarego");
+    		opcje.add("Rozowego");
+    		opcje.add("Brazowego");
+    		opcje.add("Fioletowego");
+    		opcje.add("Zoltego");
+        w.set("Jakiego koloru sa skrzydla?", "SkrzydlaKoloru", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+rule "Rece" salience 2
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Rece");
+    then
+    	insert(new Pytanie("Rece"));
+        w.set("Czy twoj pokemon ma rece?", "Rece", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "ReceKolor" salience 1
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Rece");
+    	not Pytanie(tekst == "ReceKolor");
+    then
+    	insert(new Pytanie("ReceKolor"));
+    	List<String> opcje = new ArrayList<String>();
+    		opcje.add("Zielonego");
+    		opcje.add("Pomaranczowego");
+    		opcje.add("Kremowego");
+    		opcje.add("Niebieskiego");
+    		opcje.add("Blekitnego");
+    		opcje.add("Czarnego");
+    		opcje.add("Bialego");
+    		opcje.add("Szarego");
+    		opcje.add("Rozowego");
+    		opcje.add("Brazowego");
+    		opcje.add("Fioletowego");
+    		opcje.add("Zoltego");
+        w.set("Jakiego koloru sa rece?", "ReceKoloru", FormatOdp.RADIOBUTTON, opcje);
+    	retract(w);
+end
+
+rule "Bron"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Bron");
+    then
+    	insert(new Pytanie("Bron"));
+        w.set("Czy twoj pokemon ma bron?", "Bron", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Dziob"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Dziob");
+    then
+    	insert(new Pytanie("Dziob"));
+        w.set("Czy twoj pokemon ma dziob?", "Dziob", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Piora"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Piora");
+    then
+    	insert(new Pytanie("Piora"));
+        w.set("Czy twoj pokemon ma piora?", "Piora", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Futro"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Futro");
+    then
+    	insert(new Pytanie("Futro"));
+        w.set("Czy twoj pokemon ma futro?", "Futro", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Wasy"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Wasy");
+    then
+    	insert(new Pytanie("Wasy"));
+        w.set("Czy twoj pokemon ma wasy?", "Wasy", FormatOdp.YESNO);
+    	retract(w);
+end
+
+rule "Jezyk"
+    when
+    	w : Wyswietlanie();
+    	not Pytanie(tekst == "Jezyk");
+    then
+    	insert(new Pytanie("Jezyk"));
+        w.set("Czy twoj pokemon ma wytkniety jezyk?", "Jezyk", FormatOdp.YESNO);
+    	retract(w);
+end
+
+// ************************************
+//			POKEMONY
+rule "Bulbasaur"
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Nogi4");
+    	Cecha(tresc == "NogiKoloruZielonego");
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "OczyKoloruCzerwonego");
+    	Cecha(tresc == "Wzor");
+    	Cecha(tresc == "Pazury");
+    	Cecha(tresc == "Zeby");
+    	Cecha(tresc == "UszyKoloruZielonego");
+    	Cecha(tresc == "Nosi");
+    then
+    	w.set("Bulbasaur", true);        
+    	retract(w);
+end
+
+rule "Charizard"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Nogi2");
+    	Cecha(tresc == "NogiKoloruPomaranczowego");
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "Pazury");
+    	Cecha(tresc == "Zeby");
+		Cecha(tresc == "RogiKoloruPomaranczowego");
+		(or Cecha(tresc == "OgonKoloruPomaranczowego");
+			Cecha(tresc == "OgonKoloruKremowego");
+		)
+		(or Cecha(tresc == "SkrzydlaKoloruPomaranczowego");
+			Cecha(tresc == "SkrzydlaKoloruNiebieskiego");
+		)
+		Cecha(tresc == "ReceKoloruPomaranczowego");
+    then
+    	w.set("Charizard", true);        
+    	retract(w);
+end
+
+rule "Blastoise"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+    	Cecha(tresc == "NogiKoloruNiebieskiego");
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "Pazury");
+    	Cecha(tresc == "UszyKoloruNiebieskiego");
+    	Cecha(tresc == "Nosi");
+    	Cecha(tresc == "ReceKoloruNiebieskiego");
+    	Cecha(tresc == "OgonKoloruNiebieskiego");
+    	Cecha(tresc == "Bron");
+	then
+	w.set("Blastoise", true);        
+    	retract(w)
+end
+
+
+rule "Butterfree"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Nogi2");
+    	Cecha(tresc == "NogiKoloruBlekitnego");
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "OczyKoloruCzerwonego");
+    	Cecha(tresc == "Zeby");
+		Cecha(tresc == "RogiKoloruCzarnego");
+		(or Cecha(tresc == "SkrzydlaKoloruBialego");
+			Cecha(tresc == "SkrzydlaKoloruCzarnego");
+		)
+		Cecha(tresc == "ReceKoloruBlekitnego");
+    then
+    	w.set("Butterfree", true);        
+    	retract(w);
+end
+
+rule "Beedrill"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Nogi2");
+    	Cecha(tresc == "NogiKoloruSzarego");
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "OczyKoloruCzerwonego");
+    	Cecha(tresc == "Wzor");
+    	Cecha(tresc == "ReceKoloruSzarego");
+		Cecha(tresc == "RogiKoloruSzarego");
+		(or Cecha(tresc == "SkrzydlaKoloruBialego");
+			Cecha(tresc == "SkrzydlaKoloruCzarnego");
+		)
+		Cecha(tresc == "Bron");
+    then
+    	w.set("Beedrill", true);        
+    	retract(w);
+end
+
+rule "Pidgeot"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Nogi2");
+    	Cecha(tresc == "NogiKoloruRozowego");
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "Pazury");
+    	Cecha(tresc == "OgonKoloruPomaranczowego");
+    	(or Cecha(tresc == "SkrzydlaKoloruBrazowego");
+			Cecha(tresc == "SkrzydlaKoloruKremowego");
+		)
+		Cecha(tresc == "Piora");
+		Cecha(tresc == "Dziob");
+    then
+    	w.set("Pidgeot", true);        
+    	retract(w);
+end
+
+rule "Raticate"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Nogi2");
+    	Cecha(tresc == "NogiKoloruKremowego");
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "Pazury");
+    	Cecha(tresc == "Zeby");
+    	Cecha(tresc == "OgonKoloruKremowego");
+    	(or Cecha(tresc == "UszyKoloruBrazowego");
+			Cecha(tresc == "UszyKoloruSzarego");
+		)
+    	Cecha(tresc == "ReceKoloruKremowego");
+
+		Cecha(tresc == "Wasy");
+		Cecha(tresc == "Futro");
+    then
+    	w.set("Raticate", true);        
+    	retract(w);
+end
+
+
+rule "Arbok"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "Wzor");
+    	Cecha(tresc == "Zeby");
+    	Cecha(tresc == "OgonKoloruFioletowego");
+		Cecha(tresc == "Jezyk");
+    then
+    	w.set("Arbok", true);        
+    	retract(w);
+end
+
+rule "Pikachu"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Nogi2");
+    	Cecha(tresc == "NogiKoloruZoltego");
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "OczyKoloruCzarnego");
+    	(or Cecha(tresc == "UszyKoloruZoltego");
+    		Cecha(tresc == "UszyKoloruCzarnego");
+    	)
+    	Cecha(tresc == "ReceKoloruZoltego");
+    	Cecha(tresc == "OgonKoloruZoltego");
+    then
+    	w.set("Pikachu", true);        
+    	retract(w);
+end
+
+rule "Nidoking"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Nogi2");
+    	(or Cecha(tresc == "NogiKoloruFioletowego");
+    		Cecha(tresc == "NogiKoloruRozowego");
+    	)
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "Pazury");
+    	Cecha(tresc == "Zeby");
+    	(or Cecha(tresc == "UszyKoloruFioletowgo");
+    		Cecha(tresc == "UszyKoloruRozowego");
+    		Cecha(tresc == "UszyKoloruZielony");
+    	)
+    	(or Cecha(tresc == "ReceKoloruFioletowego");
+    		Cecha(tresc == "ReceKoloruRozowego");
+    	)
+    	(or Cecha(tresc == "OgonKoloruFioletowego");
+    		Cecha(tresc == "OgonKoloruRozowego");
+    	)
+    	(or Cecha(tresc == "RogiKoloruFioletowego");
+    		Cecha(tresc == "RogiKoloruRozowego");
+    	)
+    then
+    	w.set("Nidoking", true);        
+    	retract(w);
+end
+
+rule "Alakazam"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		(or
+			Cecha(tresc == "NogiKoloruZoltego");
+			Cecha(tresc == "NogiKoloruBrazowego");
+		)
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "Pazury");
+		(or
+			Cecha(tresc == "UszyKoloruZoltego");
+			Cecha(tresc == "RogiKoloruZoltego");
+		)
+		Cecha(tresc == "Nosi");
+		Cecha(tresc == "ReceKoloruZoltego");
+		Cecha(tresc == "Bron");
+		Cecha(tresc == "Wasy");
+    then
+    	w.set("Alakazam", true);        
+    	retract(w);
+end
+
+rule "Cubone"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		Cecha(tresc == "NogiKoloruBrazowego");
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "Nosi");
+		Cecha(tresc == "ReceKoloruBrazowego");
+		Cecha(tresc == "OgonKoloruBrazowego");
+		Cecha(tresc == "Bron");
+    then
+    	w.set("Cubone", true);        
+    	retract(w);
+end
+
+rule "Doduo"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		(or
+			Cecha(tresc == "NogiKoloruBrazowego");
+			Cecha(tresc == "NogiKoloruKremowego");
+		)
+		Cecha(tresc == "Oczy4");
+		Cecha(tresc == "Pazury");
+		Cecha(tresc == "Dziob");
+		Cecha(tresc == "Futro");
+    then
+    	w.set("Doduo", true);        
+    	retract(w);
+end
+
+rule "Farfetch'd"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		(or Cecha(tresc == "NogiKoloruZoltego");
+			Cecha(tresc == "NogiKoloruPomaranczowego");
+		)
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "Nosi");
+		Cecha(tresc == "OgonKoloruBrazowego");
+		(or Cecha(tresc == "SkrzydlaKoloruBrazowego");
+			Cecha(tresc == "SkrzydlaKoloruKremowego");
+		)
+		Cecha(tresc == "Bron");
+		Cecha(tresc == "Dziob");
+		Cecha(tresc == "Piora");
+    then
+    	w.set("Farfetch'd", true);        
+    	retract(w);
+end
+
+rule "Golduck"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		Cecha(tresc == "NogiKoloruNiebieskiego");
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "OczyKoloruCzerwonego");
+		Cecha(tresc == "Pazury");
+		(or
+			Cecha(tresc == "UszyKoloruNiebieskiego");
+			Cecha(tresc == "RogiKoloruNiebieskiego");
+		)
+		Cecha(tresc == "ReceKoloruNiebieskiego");
+		Cecha(tresc == "OgonKoloruNiebieskiego");
+		Cecha(tresc == "DziobKoloruZoltego");
+    then
+    	w.set("Golduck", true);        
+    	retract(w);
+end
+
+rule "Kabuto"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi4");
+		Cecha(tresc == "NogiKoloruBrazowego");
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "OczyKoloruRozowego");
+    then
+    	w.set("Kabuto", true);        
+    	retract(w);
+end
+
+rule "Lickitung"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		Cecha(tresc == "NogiKoloruRozowego");
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "Wzor");
+		Cecha(tresc == "OgonKoloruRozowego");
+		Cecha(tresc == "Jezyk");
+    then
+    	w.set("Lickitung", true);        
+    	retract(w);
+end
+
+rule "Parasect"
+	when
+		w : Wyswietlanie();
+		(or Cecha(tresc == "Nogi4"); // or 6?
+			Cecha(tresc == "Nogi6");
+		)
+		Cecha(tresc == "NogiKoloruPomaranczowego");
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "OczyKoloruBialego");
+		Cecha(tresc == "Wzor");
+		Cecha(tresc == "Nosi");
+		Cecha(tresc == "ReceKoloruPomaranczowego"); // szczypce to rece?
+    then
+    	w.set("Parasect", true);        
+    	retract(w);
+end
+
+rule "Pinsir"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		Cecha(tresc == "NogiKoloruBrazowego");
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "Pazury");
+		Cecha(tresc == "Kly");
+		Cecha(tresc == "ReceKoloruBrazowego");
+		Cecha(tresc == "RogiKoloruSzarego");
+    then
+    	w.set("Pinsir", true);        
+    	retract(w);
+end
+
+rule "Primeape"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		Cecha(tresc == "NogiKoloruBrazowego");
+		Cecha(tresc == "Oczy2");
+		(or
+			Cecha(tresc == "UszyKoloruKremowego");
+			Cecha(tresc == "UszyKoloruBialego");
+		)
+		Cecha(tresc == "ReceKoloruBrazowego");
+		Cecha(tresc == "Futro");
+    then
+    	w.set("Primeape", true);        
+    	retract(w);
+end
+
+
+rule "Venonat"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		Cecha(tresc == "NogiKoloruKremowego");
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "OczyKoloruRozowego");
+		Cecha(tresc == "RogiKoloruBialego");
+		Cecha(tresc == "Futro");
+    then
+    	w.set("Venonat", true);        
+    	retract(w);
+end
+
+rule "Electrabuzz"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		(or
+			Cecha(tresc == "NogiKoloruZoltego");
+			Cecha(tresc == "NogiKoloruCzarnego");
+		)
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "Wzor");
+		Cecha(tresc == "Pazury");
+		Cecha(tresc == "Zeby");
+		(or
+			Cecha(tresc == "ReceKoloruZoltego");
+			Cecha(tresc == "ReceKoloruCzarnego");
+		)
+		(or
+			Cecha(tresc == "OgonKoloruCzarnego");
+			Cecha(tresc == "OgonKoloruZoltego");
+		)
+		Cecha(tresc == "RogiKoloruZoltego");
+    then
+    	w.set("Electrabuzz", true);        
+    	retract(w);
+end
+
+rule "Gyarados"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "Wzor"); //?
+		Cecha(tresc == "Zeby");
+		(or
+			Cecha(tresc == "OgonKoloruBlekitnego");
+			Cecha(tresc == "OgonKoloruSzarego");
+			Cecha(tresc == "OgonKoloruKremowego");
+		)
+		Cecha(tresc == "RogiKoloruBlekitnego");
+		Cecha(tresc == "Wasy");
+    then
+    	w.set("Gyarados", true);        
+    	retract(w);
+end
+
+rule "Arcanine"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi4");
+		(or
+			Cecha(tresc == "NogiKoloruPomaranczowego");
+			Cecha(tresc == "NogiKoloruCzarnego");
+		)
+		Cecha(tresc == "Oczy2");
+		Cecha(tresc == "Wzor");
+		Cecha(tresc == "UszyKoloruPomaranczowego");
+		Cecha(tresc == "OgonKoloruKremowego");
+		Cecha(tresc == "Futro");
+    then
+    	w.set("Arcanine", true);        
+    	retract(w);
+end
+
+rule "Slowbro"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi2");
+		Cecha(tresc == "NogiKoloruRozowego");
+		Cecha(tresc == "Oczy4");
+		Cecha(tresc == "Pazury");
+		Cecha(tresc == "Zeby");
+		Cecha(tresc == "ReceKoloruRozowego");
+		Cecha(tresc == "UszyKoloruRozowego");
+		Cecha(tresc == "OgonKoloruSzarego");
+    then
+    	w.set("Slowbro", true);        
+    	retract(w);
+end
+
+rule "Tauros"
+	when
+		w : Wyswietlanie();
+		Cecha(tresc == "Nogi4");
+		(or
+			Cecha(tresc == "NogiKoloruKremowy");
+    		Cecha(tresc == "NogiKoloruBrazowego");
+    	)
+    	Cecha(tresc == "Oczy2");
+    	(or
+    		Cecha(tresc == "OgonKoloruSzarego");
+    		Cecha(tresc == "OgonKoloruBrazowego");
+    	)
+    	Cecha(tresc == "RogiKoloruSzarego");
+    	Cecha(tresc == "Futro");
+    then
+    	w.set("Tauros", true);        
+    	retract(w);
+end
+
+rule "Shellder"
+	when
+		w : Wyswietlanie();
+    	Cecha(tresc == "Oczy2");
+    	Cecha(tresc == "Nosi"); //?
+    	Cecha(tresc == "RogiKoloruFioletowego");
+    	Cecha(tresc == "Jezyk");
+    then
+    	w.set("Shellder", true);        
+    	retract(w);
 end
