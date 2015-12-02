@@ -24,7 +24,7 @@ rule "Wielkosc" salience 1
     	not Pytanie(tekst == "Wielkosc");
     then
     	insert(new Pytanie("Wielkosc"));
-        w.set("Czy wielkoœæ twojej postaci ma znaczenie?", "Wielkoœæ", FormatOdp.YESNO);
+        w.set("Czy wielkoœæ twojej postaci ma znaczenie?", "Wielkosc", FormatOdp.YESNO);
     	retract(w);
 end
 
@@ -36,10 +36,10 @@ rule "WielkoscDwa" salience 2
     then
     	insert(new Pytanie("WielkoscDwa"));
     	List<String> opcje = new ArrayList<String>();
-    		opcje.add("Ma³a");
-    		opcje.add("Du¿a");
-    		opcje.add("Wielka");
-        w.set("Jak du¿¹ postaci¹ wolisz?", "Wielkosc", FormatOdp.RADIOBUTTON, opcje);
+    		opcje.add("Ma³y");
+    		opcje.add("Du¿y");
+    		opcje.add("Wielki");
+        w.set("Jak du¿y chcia³byœ byæ?", "", FormatOdp.RADIOBUTTON, opcje);
     	retract(w);
 end
 
@@ -66,7 +66,7 @@ rule "WiekDwa" salience 2
     		opcje.add("M³oda");
     		opcje.add("W œrednim wieku");
     		opcje.add("Stara");
-        w.set("Jaki wiek twojej postac preferujesz?", "Wiek", FormatOdp.RADIOBUTTON, opcje);
+        w.set("Jaki wiek twojej postac preferujesz?", "", FormatOdp.RADIOBUTTON, opcje);
     	retract(w);
 end
 
@@ -96,7 +96,7 @@ rule "Bron" salience 2
     		opcje.add("Pistolet");
     		opcje.add("Sztylety");
     		opcje.add("Maczuga");
-        w.set("Jakie bronie lubisz?", "Bron",  FormatOdp.WIELOKROTYN, opcje);
+        w.set("Jakie bronie lubisz?", "",  FormatOdp.WIELOKROTYN, opcje);
     	retract(w);
 end
 
@@ -121,7 +121,7 @@ rule "WszechstronnyDwa" salience 2
     		opcje.add("Inteligencja");
     		opcje.add("Spryt");
     		opcje.add("Si³a");
-        w.set("Jaka cecha jest dla Ciebie najwa¿niejsza?", "Wszechtronny", FormatOdp.YESNO);
+        w.set("Jaka cecha jest dla Ciebie najwa¿niejsza?", "", FormatOdp.YESNO);
     	retract(w);
 end
 
@@ -205,7 +205,7 @@ rule "SiedzibaDwa" salience 2
     		opcje.add("W lesie");
     		opcje.add("W grocie");
     		opcje.add("W wie¿y");
-        w.set("Gdzie chcia³byœ zamieszkaæ?", "SiedzibaDwa", FormatOdp.RADIOBUTTON, opcje);
+        w.set("Gdzie chcia³byœ zamieszkaæ?", "", FormatOdp.RADIOBUTTON, opcje);
     	retract(w);
 end
 
@@ -227,13 +227,13 @@ rule "PancerzDwa" salience 2
     then
     	insert(new Pytanie("PancerzDwa"));
     	List<String> opcje = new ArrayList<String>();
-    		opcje.add("Ciê¿k¹ zbrojê");
+    		opcje.add("Ciê¿ka zbroja");
     		opcje.add("He³m z rogami");
-    		opcje.add("Tarczê");
-    		opcje.add("Lekk¹ zbrojê");
-    		opcje.add("Skórzan¹ zbrojê");
+    		opcje.add("Tarcza");
+    		opcje.add("Lekka zbroja");
+    		opcje.add("Skórzana zbroja");
     		
-        w.set("Jakie opancerzenie chcia³byœ nosiæ?", "Pancerz", FormatOdp.WIELOKROTYN, opcje);
+        w.set("Jaki pancerz?", "", FormatOdp.WIELOKROTYN, opcje);
     	retract(w);
 end
 
@@ -276,7 +276,7 @@ rule "ZwierzDwa" salience 2
     	not Pytanie(tekst == "ZwierzeDwa");
     then
     	insert(new Pytanie("ZwierzeDwa"));
-        w.set("Czy chcia³byœ mieæ zwierzê?", "ZwierzeDwa", FormatOdp.YESNO);
+        w.set("Czy chcia³byœ mieæ zwierzê?", "MaZwierze", FormatOdp.YESNO);
     	retract(w);
 end
 
@@ -284,7 +284,7 @@ end
 rule "ZwierzeTrzy" salience 3
     when
     	w : Wyswietlanie();
-    	Cecha( tresc == "ZwierzeDwa");
+    	Cecha( tresc == "MaZwierze");
     	not Pytanie(tekst == "ZwierzeTrzy");
     then
     	insert(new Pytanie("ZwierzeTrzy"));
@@ -293,12 +293,12 @@ rule "ZwierzeTrzy" salience 3
     		opcje.add("Wilka");
     		opcje.add("Kruka");
     		opcje.add("Sowê");
-        w.set("Jakie zwierzê chcia³byœ mieæ?", "Piora",  FormatOdp.RADIOBUTTON, opcje);
+        w.set("Jakie zwierzê chcia³byœ mieæ?", "",  FormatOdp.RADIOBUTTON, opcje);
     	retract(w);
 end
 
 
-rule "Uczciwy" salience 1
+rule "Uczciwy" 
     when
     	w : Wyswietlanie();
     	not Pytanie(tekst == "Uczciwy");
@@ -308,7 +308,7 @@ rule "Uczciwy" salience 1
     	retract(w);
 end
 
-rule "Piekny" salience 1
+rule "Piekny" 
     when
     	w : Wyswietlanie();
     	not Pytanie(tekst == "Piekny");
@@ -318,7 +318,7 @@ rule "Piekny" salience 1
     	retract(w);
 end
 
-rule "Hobby" salience 1
+rule "Hobby" 
     when
     	w : Wyswietlanie();
     	not Pytanie(tekst == "Hobby");
@@ -329,14 +329,14 @@ rule "Hobby" salience 1
     		opcje.add("Zabawa");
     		opcje.add("Mechanizmy");
     		opcje.add("Zielarstwo");
-    		opcje.add("numizmatyka");
-    		opcje.add("zbieranie kamieni");
-    		opcje.add("zbieranie wszystkiego");
-        w.set("Jakie jest Twoje hobby?", "Hobby",  FormatOdp.WIELOKROTYN, opcje);
+    		opcje.add("Numizmatyka");
+    		opcje.add("Zbieranie kamieni");
+    		opcje.add("Zbieranie wszystkiego");
+        w.set("Jakie jest Twoje hobby?", "",  FormatOdp.WIELOKROTYN, opcje);
     	retract(w);
 end
 
-rule "Dobry" salience 1
+rule "Dobry" 
     when
     	w : Wyswietlanie();
     	not Pytanie(tekst == "Dobro");
@@ -346,7 +346,7 @@ rule "Dobry" salience 1
     	retract(w);
 end
 
-rule "Szybki" salience 1
+rule "Szybki" 
     when
     	w : Wyswietlanie();
     	not Pytanie(tekst == "Szybki");
@@ -356,7 +356,7 @@ rule "Szybki" salience 1
     	retract(w);
 end
 
-rule "Wynalazki" salience 1
+rule "Wynalazki" 
     when
     	w : Wyswietlanie();
     	not Pytanie(tekst == "Wynalazki");
@@ -367,14 +367,20 @@ rule "Wynalazki" salience 1
 end
 // ************************************
 //			 Rasy i Klasy 
-//				20 klas
+//				22 klasy
 // ************************************
 
-//Ludzie
+// ******************Ludzie*********************
 rule "Mag" salience 3
     when
     	w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "Stary");
+		Cecha( tresc == "Kostur");
+		Cecha( tresc == "Ineligencja");
+		Cecha( tresc == "W Wie¿y");
+		Cecha( tresc == "Lekka zbroja");
+		Cecha( tresc == "Sowê");
+		Cecha( tresc == "Ksiêgi");
     then
     	w.set("Mag", true);        
     	retract(w);
@@ -383,7 +389,16 @@ end
 rule "Wojownik" salience 3
 	when
 		w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "Du¿y");
+		Cecha( tresc == "M³oda");
+		(or
+			Cecha( tresc == "Miecz");
+			Cecha( tresc == "Topór");
+			Cecha( tresc == "£uk");
+			)
+		Cecha( tresc == "Si³a");
+		Cecha( tresc == "W chacie");
+		Cecha( tresc == "Ciê¿ka zbroja");
     then
     	w.set("Wojownik", true);        
     	retract(w);
@@ -392,17 +407,38 @@ end
 rule "Paladyn" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "Du¿y");
+		Cecha( tresc == "MaZwierze");
+		Cecha( tresc == "M³oda");
+		Cecha( tresc == "Miecz");
+		Cecha( tresc == "ZakleciaWspieraj¹ce");
+		Cecha( tresc == "W chacie");
+		(or
+			Cecha( tresc == "Ciê¿ka Zbroja");
+			Cecha( tresc == "Tarcza");
+			)
+		Cecha( tresc == "Konia");
+		Cecha( tresc == "Uczciwy");
+		Cecha( tresc == "Dobry");
+		Cecha( tresc == "Szybki");
 	then
 	w.set("Paladyn", true);        
     	retract(w)
 end
 
-
 rule "£otrzyk" salience 3
 	when
 		w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "Ma³y");
+		not Cecha( tresc == "Uczciwy");
+		Cecha( tresc == "KolorCzarny");
+		Cecha( tresc == "M³oda");
+		Cecha( tresc == "Sztylety");
+		Cecha( tresc == "Spryt");
+		Cecha( tresc == "W chacie");
+		Cecha( tresc == "Lekka zbroja");
+		Cecha( tresc == "Numizmatyka");
+		Cecha( tresc == "Szybki");
     then
     	w.set("£otrzyk", true);        
     	retract(w);
@@ -411,7 +447,11 @@ end
 rule "Strzelec" salience 3
 	when
 		w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "M³oda");
+		Cecha( tresc == "Pistolet");
+		Cecha( tresc == "W chacie");
+		Cecha( tresc == "Lekka zbroja");
+		Cecha( tresc == "Skórzana zbroja");
     then
     	w.set("Strzelec", true);        
     	retract(w);
@@ -420,17 +460,36 @@ end
 rule "In¿yniert" salience 3
 	when
 		w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "Ma³y");
+		not Cecha( tresc == "Walczy");
+		Cecha( tresc == "W œrednim wieku");
+		Cecha( tresc == "Inteligencja");
+		Cecha( tresc == "W chacie");
+		Cecha( tresc == "Mechanizmy");
+		Cecha( tresc == "Dobry");
+		Cecha( tresc == "Wynalazki");
     then
     	w.set("In¿ynier", true);        
     	retract(w);
 end
 
-//Orki
+
+
+// *******************Orki*********************
 rule "Barbarzynca" salience 3
 	when
 		w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "Du¿y");
+		(or
+			Cecha( tresc == "Miecz");
+			Cecha( tresc == "Topór");
+			Cecha( tresc == "Maczuga");
+		)
+		Cecha( tresc == "Si³a");
+		Cecha( tresc == "W grocie");
+		Cecha( tresc == "Skórzana zbroja");
+		not Cecha( tresc == "Uczciwy");
+		Cecha( tresc == "Numizmatyka");
     then
     	w.set("Barbarzynca", true);        
     	retract(w);
@@ -440,34 +499,64 @@ end
 rule "Szaman" salience 3
 	when
 		w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "Inteligencja");
+		Cecha( tresc == "ZakleciaWojenne");
+		Cecha( tresc == "ZakleciaKl¹twy");
+		Cecha( tresc == "W wie¿y");
+		Cecha( tresc == "Lekka zbroja");
+		Cecha( tresc == "Kruka");
+		Cecha( tresc == "Ksiêgi");
     then
     	w.set("Szaman", true);        
     	retract(w);
 end
 
-rule "Lowca" salience 3
+rule "£owca" salience 3
 	when
 		w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "Du¿y");
+		(or
+			Cecha( tresc == "£uk");
+			Cecha( tresc == "Kusza");
+		)
+		Cecha( tresc == "W grocie");
+		Cecha( tresc == "Lekka zbroja");
+		Cecha( tresc == "Wilka");
     then
-    	w.set("Lowca", true);        
+    	w.set("£owca", true);        
     	retract(w);
 end
 
 rule "Jezdziec Wilkow" salience 3
 	when
 		w : Wyswietlanie();
-    	//do uzupe³nienia cechy
+    	Cecha( tresc == "Du¿y");
+    	Cecha( tresc == "MaZwierze");
+		(or
+			Cecha( tresc == "Miecz");
+			Cecha( tresc == "Topór");
+		)
+		(or
+			Cecha( tresc == "Spryt");
+			Cecha( tresc == "Si³a");
+		)
+		Cecha( tresc == "W grocie");
+		Cecha( tresc == "Skórzana zbroja");
+    	Cecha( tresc == "Wilka");
+    	Cecha( tresc == "Szybki");
     then
-    	w.set("Nidoking", true);        
+    	w.set("Jezdziec Wilkow", true);        
     	retract(w);
 end
 
 rule "Olbrzym" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "Wielki");
+		Cecha( tresc == "Maczuga");
+    	Cecha( tresc == "Si³a");
+    	Cecha( tresc == "W grocie");
+    	Cecha( tresc == "Zieranie kamieni");
     then
     	w.set("Olbrzym", true);        
     	retract(w);
@@ -476,7 +565,16 @@ end
 rule "Gremlin" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "Ma³y");
+		not Cecha( tresc == "Uczciwy");
+    	(or
+    		Cecha( tresc == "£uk");
+    		Cecha( tresc == "Sztylety");
+    	)
+    	Cecha( tresc == "Spryt");
+    	Cecha( tresc == "W grocie");
+    	Cecha( tresc == "Lekka zbroja");
+    	Cecha( tresc == "Zbieranie wszystkiego");
     then
     	w.set("Gremlin", true);        
     	retract(w);
@@ -486,7 +584,19 @@ end
 rule "Uzdrowicie;" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "Piekny");
+    	not Cecha( tresc == "Walczy");
+    	Cecha( tresc == "Inteligencja");
+    	(or
+    		Cecha( tresc == "ZakleciaLecznicze");
+    		Cecha( tresc == "ZakleciaWspierajace");
+    		)
+    	Cecha( tresc == "W lesie");
+    	Cecha( tresc == "Sowê");
+    	Cecha( tresc == "Uczciwy");
+    	Cecha( tresc == "Ksiêgi");
+    	Cecha( tresc == "Zielarstwo");
+    	Cecha( tresc == "Dobry");
     then
     	w.set("Uzdrowiciel", true);        
     	retract(w);
@@ -495,7 +605,11 @@ end
 rule "Bard" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "Piekny");
+    	not Cecha( tresc == "Walczy");
+    	Cecha( tresc == "KolorRó¿owy");
+    	Cecha( tresc == "Konia");
+    	Cecha( tresc == "Zabawa");
     then
     	w.set("Bard", true);        
     	retract(w);
@@ -504,7 +618,16 @@ end
 rule "£ucznik" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "Piekny");
+    	Cecha( tresc == "£uk");
+    	Cecha( tresc == "W lesie");
+    	Cecha( tresc == "Lekka zbroja");
+    	(or
+    		Cecha( tresc == "Konia");
+    		Cecha( tresc == "Wilka");
+    	)
+    	Cecha( tresc == "Uczciwy");
+    	Cecha( tresc == "Szybki");
     then
     	w.set("£ucznik", true);        
     	retract(w);
@@ -513,7 +636,18 @@ end
 rule "Assasyn" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "Piekny");
+    	Cecha( tresc == "KolorCzarny");
+    	(or
+    		Cecha( tresc == "Miecz");
+    		Cecha( tresc == "Kusza");
+    		Cecha( tresc == "£uk");
+    		Cecha( tresc == "Sztylety");
+    	)
+    	Cecha( tresc == "Spryt");
+    	Cecha( tresc == "W lesie");
+    	Cecha( tresc == "Lekka zbroja");
+    	Cecha( tresc == "Szybki");
     then
     	w.set("Assasyn", true);        
     	retract(w);
@@ -522,7 +656,16 @@ end
 rule "Druid" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "MaZwierze");
+    	not Cecha( tresc == "Walczy");
+    	Cecha( tresc == "KolorZielony");
+    	Cecha( tresc == "W lesie");
+    	(or
+    		Cecha( tresc == "Wilka");
+    		Cecha( tresc == "Kruka");
+    	)
+    	Cecha( tresc == "Uczciwy");
+    	Cecha( tresc == "Dobry");
     then
     	w.set("Druid", true);        
     	retract(w);
@@ -531,26 +674,92 @@ end
 rule "Mêdrzec" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "Stary");
+    	not Cecha( tresc == "Walczy");
+    	Cecha( tresc == "Inteligencja");
+    	(or
+    		Cecha( tresc == "ZakleciaLecznicze");
+    		Cecha( tresc == "ZakleciaWojenne");
+    	)
+    	Cecha( tresc == "W wie¿y");
+    	Cecha( tresc == "Sowê");
+    	Cecha( tresc == "Uczciwy");
+    	Cecha( tresc == "Ksiêgi");
+    	Cecha( tresc == "Zielarstwo");
     then
     	w.set("Mêdrzec", true);        
     	retract(w);
 end
 
-//klasy bez rasy
+// *************klasy bez rasy**********************
 rule "Dragonborn" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "MaZwierze");
+		Cecha( tresc == "Wszechstronny");
+		Cecha( tresc == "KolorCzerwony");
+		(or
+		Cecha( tresc == "Miecz");
+		Cecha( tresc == "Topór");
+		Cecha( tresc == "Kusza");
+		Cecha( tresc == "£uk");
+		)
+		Cecha( tresc == "Si³a");
+		Cecha( tresc == "ZakleciaWojenne");
+		Cecha( tresc == "Ciê¿ka zbrojê");
+		Cecha( tresc == "He³m z rogami");
+		Cecha( tresc == "Konia");
+		Cecha( tresc == "bieranie wszystkiego");
+		Cecha( tresc == "Szybki");
+		
     then
     	w.set("Dragonborn", true);        
     	retract(w);
+end
+ 
+rule "Z³odziej" salience 3
+	when
+		w : Wyswietlanie();
+		not Cecha( tresc == "Walczy");
+		Cecha( tresc == "Szybki");
+		not Cecha( tresc == "Uczciwy");
+		Cecha( tresc == "W chacie");
+		Cecha( tresc == "Zbieranie wszystkiego");
+		Cecha( tresc == "Numizmatyka ");
+		Cecha( tresc == "Wynalazki");
+	then
+		w.set("WiedŸmin",true);	
+		retract(w);
+end
+
+rule "Pijak" salience 3
+	when
+		w : Wyswietlanie();
+		Cecha( tresc == "Walczy");
+		Cecha( tresc == "Zielarstwo");
+		Cecha( tresc == "W chacie");
+		Cecha( tresc == "Stary ");
+		Cecha( tresc == "Zbieranie wszystkiego");
+		not Cecha( tresc == "Szybki");
+	then
+		w.set("Pijak",true);	
+		retract(w);
 end
 
 rule "WiedŸmin" salience 3
 	when
 		w : Wyswietlanie();
-		//do uzupe³nienia cechy
+		Cecha( tresc == "MaZwierze");
+		Cecha( tresc == "KolorBia³y");
+		(or
+			Cecha( tresc == "Miecz");
+			Cecha( tresc == "Kusza");
+		)
+		Cecha( tresc == "ZakleciaWojenne");
+		Cecha( tresc == "Skórzana zbroja");
+		Cecha( tresc == "Konia");
+		Cecha( tresc == "Zielarstwo");
+		Cecha( tresc == "Szybki");
     then
     	w.set("WiedŸmin", true);        
     	retract(w);

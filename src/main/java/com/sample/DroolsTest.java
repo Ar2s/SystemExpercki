@@ -42,7 +42,7 @@ public class DroolsTest {
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
 
             //tworzenie pierwszego okna
-            w = new Wyswietlanie("Witaj. A teraz odgadne twojego pokemona!", FormatOdp.NONE);
+            w = new Wyswietlanie("Pomogê Ci wybrac klasê :)", FormatOdp.NONE);
             o = new Okno(w);
             
             //wrzucamy wysietlenie do bazy wiedzy
@@ -109,7 +109,7 @@ public class DroolsTest {
         			{
         				if(i.isSelected())
         				{
-        					c = new Cecha(w.wynik+i);
+        					c = new Cecha(w.wynik+i.getText());
         					ksession.insert(c);
         				}
         			
