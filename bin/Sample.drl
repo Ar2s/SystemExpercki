@@ -13,243 +13,187 @@ end
 
 // ************************************
 //			PYTANIA
+//		10 pytañ g³ownych, 10 szczegó³oweych i 10 ogolnych
+// ************************************
 
-rule "Nogi" salience 2
+//jak pytanie ma slience 2, to ma wy¿szy prioritet, domyœla wartoœæ = 0
+// pytania wynikaj¹ce z innych maj¹ wy¿szy, aby zaraz potem siê zada³y
+rule "Wielkosc" salience 1
     when
     	w : Wyswietlanie();
-    	not Pytanie(tekst == "Nogi");
+    	not Pytanie(tekst == "Wielkosc");
     then
-    	insert(new Pytanie("Nogi"));
-        w.set("Czy twoj pokemon ma nogi?", "Nogi", FormatOdp.YESNO);
+    	insert(new Pytanie("Wielkosc"));
+        w.set("Czy wielkoœæ twojej postaci ma znaczenie?", "Wielkoœæ", FormatOdp.YESNO);
     	retract(w);
 end
 
-rule "NogiLiczba" salience 1
+rule "WielkoscDwa" salience 2
     when
     	w : Wyswietlanie();
-    	Cecha(tresc == "Nogi");
-    	not Pytanie(tekst == "NogiLiczba");
+    	Cecha(tresc == "Wielkosc");
+    	not Pytanie(tekst == "WielkoscDwa");
     then
-    	insert(new Pytanie("NogiLiczba"));
+    	insert(new Pytanie("WielkoscDwa"));
     	List<String> opcje = new ArrayList<String>();
-    		opcje.add("1");
-    		opcje.add("2");
-    		opcje.add("3");
-    		opcje.add("4");
-    		opcje.add("5");
-    		opcje.add("6");
-        w.set("Ile nog ma twoj pokemon?", "Nogi", FormatOdp.RADIOBUTTON, opcje);
+    		opcje.add("Ma³a");
+    		opcje.add("Du¿a");
+    		opcje.add("Wielka");
+        w.set("Jak du¿¹ postaci¹ wolisz?", "Wielkosc", FormatOdp.RADIOBUTTON, opcje);
     	retract(w);
 end
 
-rule "NogiKolor" salience 1
+
+rule "Wiek" salience 1
     when
     	w : Wyswietlanie();
-    	Cecha(tresc == "Nogi");
-    	not Pytanie(tekst == "NogiKolor");
+    	not Pytanie(tekst == "Wiek");
     then
-    	insert(new Pytanie("NogiKolor"));
+    	insert(new Pytanie("Wiek"));
+        w.set("Czy wiek towjej postaci ma znaczenie?", "Wiek", FormatOdp.YESNO);
+    	retract(w);
+end
+
+
+rule "WiekDwa" salience 2
+    when
+    	w : Wyswietlanie();
+    	Cecha(tresc == "Wielkosc");
+    	not Pytanie(tekst == "WielkoscDwa");
+    then
+    	insert(new Pytanie("WielkoscDwa"));
     	List<String> opcje = new ArrayList<String>();
-    		opcje.add("Zielonego");
-    		opcje.add("Pomaranczowego");
-    		opcje.add("Kremowego");
-    		opcje.add("Niebieskiego");
-    		opcje.add("Blekitnego");
-    		opcje.add("Czarnego");
-    		opcje.add("Bialego");
-    		opcje.add("Szarego");
-    		opcje.add("Rozowego");
-    		opcje.add("Brazowego");
-    		opcje.add("Fioletowego");
-    		opcje.add("Zoltego");
-        w.set("Jaki jest kolor nog twojego pokemona?", "NogiKoloru", FormatOdp.RADIOBUTTON, opcje);
+    		opcje.add("M³oda");
+    		opcje.add("W œrednim wieku");
+    		opcje.add("Stara");
+        w.set("Jaki wiek twojej postac preferujesz?", "Wiek", FormatOdp.RADIOBUTTON, opcje);
     	retract(w);
 end
 
-
-rule "Oczy" salience 2
+rule "Walczy" salience 1
     when
     	w : Wyswietlanie();
-    	not Pytanie(tekst == "Oczy");
+    	not Pytanie(tekst == "Walczy");
     then
-    	insert(new Pytanie("Oczy"));
-        w.set("Czy twoj pokemon ma oczy?", "Oczy", FormatOdp.YESNO);
+    	insert(new Pytanie("Walczy"));
+        w.set("Czy chcesz walczyæ?", "Walczy", FormatOdp.YESNO);
     	retract(w);
 end
 
-rule "OczyLiczba" salience 1
+rule "WalczyDwa" salience 2
     when
     	w : Wyswietlanie();
-    	Cecha(tresc == "Oczy");
-    	not Pytanie(tekst == "OczyLiczba");
+    	Cecha(tresc == "Walczy");
+    	not Pytanie(tekst == "WalczyDwa");
     then
-    	insert(new Pytanie("OczyLiczba"));
+    	insert(new Pytanie("WalczyDwa"));
     	List<String> opcje = new ArrayList<String>();
-    		opcje.add("1");
-    		opcje.add("2");
-    		opcje.add("3");
-    		opcje.add("4");
-        w.set("Ile oczu ma twoj pokemon?", "Oczy", FormatOdp.RADIOBUTTON, opcje);
+    		opcje.add("Miecz");
+    		opcje.add("Kostur");
+    		opcje.add("Topór");
+    		opcje.add("£uk");
+    		opcje.add("Kusza");
+    		opcje.add("Pistolet");
+    		opcje.add("Sztylety");
+    		opcje.add("Maczuga");
+        w.set("Jak¹ broñ wolisz najbardziej?", "WalczyDwa",  FormatOdp.RADIOBUTTON, opcje);
     	retract(w);
 end
 
-rule "OkreslicKolorOczu" salience 2
+rule "Wszechstronny" salience 1
     when
     	w : Wyswietlanie();
-    	Cecha(tresc == "Oczy");
-    	not Pytanie(tekst == "OkreslicKolorOczu");
+    	not Pytanie(tekst == "Wszechstronny");
     then
-    	insert(new Pytanie("OkreslicKolorOczu"));
-        w.set("Czy mozesz okreslic kolor oczu?", "OkreslicKolorOczu", FormatOdp.YESNO);
+    	insert(new Pytanie("Wszechstronny"));
+        w.set("Czy chcesz byæ wszechstronny(ale nie wybitny w konkretnej dziedzinie)?", "Wszechstronny", FormatOdp.YESNO);
     	retract(w);
 end
 
-rule "OczyKolor" salience 2
+rule "WszechstronnyDwa" salience 2
     when
     	w : Wyswietlanie();
-    	Cecha(tresc == "OkreslicKolorOczu");
-    	not Pytanie(tekst == "OczyKolor");
+    	Cecha( tresc == "Wszechstronny");
+    	not Pytanie(tekst == "WszechstronnyDwa");
     then
-    	insert(new Pytanie("OczyKolor"));
+    	insert(new Pytanie("WszechstronnyDwa"));
     	List<String> opcje = new ArrayList<String>();
-    		opcje.add("Zielonego");
-    		opcje.add("Pomaranczowego");
-    		opcje.add("Kremowego");
-    		opcje.add("Niebieskiego");
-    		opcje.add("Blekitnego");
-    		opcje.add("Czarnego");
-    		opcje.add("Bialego");
-    		opcje.add("Szarego");
-    		opcje.add("Rozowego");
-    		opcje.add("Brazowego");
-    		opcje.add("Fioletowego");
-    		opcje.add("Zoltego");
-        w.set("Jaki jest kolor oczu ma twoj pokemona?", "OczyKoloru", FormatOdp.RADIOBUTTON, opcje);
+    		opcje.add("Inteligencja");
+    		opcje.add("Spryt");
+    		opcje.add("Si³a");
+        w.set("Jaka cecha jest dla Ciebie najwa¿niejsza?", "Wszechtronny", FormatOdp.YESNO);
     	retract(w);
 end
 
-rule "Wzor"
+
+
+rule "Zaklecia" salience 1
     when
     	w : Wyswietlanie();
-    	not Pytanie(tekst == "Wzor");
+    	not Pytanie(tekst == "Zaklecia");
     then
-    	insert(new Pytanie("Wzor"));
-        w.set("Czy twoj pokemon ma laty lub wzor?", "Wzor", FormatOdp.YESNO);
+    	insert(new Pytanie("Zaklecia"));
+        w.set("Czy chcesz uzywac zaklec?", "Zaklecia", FormatOdp.YESNO);
     	retract(w);
 end
 
-rule "Pazury"
-    when
-    	w : Wyswietlanie();
-    	(or Cecha(tresc == "Rece");
-    		Cecha(tresc == "Nogi");
-    	)
-    	not Pytanie(tekst == "Pazury");
-    then
-    	insert(new Pytanie("Pazury"));
-        w.set("Czy twoj pokemon ma pazury?", "Pazury", FormatOdp.YESNO);
-    	retract(w);
-end
 
-rule "Zeby"
+rule "ZakleciaDwa" salience 2
     when
     	w : Wyswietlanie();
-    	not Pytanie(tekst == "Zeby");
+    	Cecha(tresc == "Zaklecia");
+    	not Pytanie(tekst == "ZakleciaDwa");
     then
-    	insert(new Pytanie("Zeby"));
-        w.set("Czy twoj pokemon ma zeby?", "Zeby", FormatOdp.YESNO);
-    	retract(w);
-end
-
-rule "Uszy" salience 2
-    when
-    	w : Wyswietlanie();
-    	not Pytanie(tekst == "Uszy");
-    then
-    	insert(new Pytanie("Uszy"));
-        w.set("Czy twoj pokemon ma uszy?", "Uszy", FormatOdp.YESNO);
-    	retract(w);
-end
-
-rule "UszyKolor" salience 1
-    when
-    	w : Wyswietlanie();
-    	Cecha(tresc == "Uszy");
-    	not Pytanie(tekst == "UszyKolor");
-    then
-    	insert(new Pytanie("UszyKolor"));
+    	insert(new Pytanie("ZakleciaDwa"));
     	List<String> opcje = new ArrayList<String>();
-    		opcje.add("Zielonego");
-    		opcje.add("Pomaranczowego");
-    		opcje.add("Kremowego");
-    		opcje.add("Niebieskiego");
-    		opcje.add("Blekitnego");
-    		opcje.add("Czarnego");
-    		opcje.add("Bialego");
-    		opcje.add("Szarego");
-    		opcje.add("Rozowego");
-    		opcje.add("Brazowego");
-    		opcje.add("Fioletowego");
-    		opcje.add("Zoltego");
-        w.set("Jaki jest kolor uszu ma twoj pokemona?", "UszyKoloru", FormatOdp.RADIOBUTTON, opcje);
+    		opcje.add("Lecznicze");
+    		opcje.add("Wojenne");
+    		opcje.add("Kl¹twy");
+    		opcje.add("Wspieraj¹ce");
+        w.set("Jakie zaklêcia wolisz?", "Zaklecia", FormatOdp.RADIOBUTTON, opcje);
     	retract(w);
 end
 
-rule "Nosi"
+
+rule "Kolor" salience 1
     when
     	w : Wyswietlanie();
-    	not Pytanie(tekst == "Nosi");
+    	not Pytanie(tekst == "Kolor");
     then
-    	insert(new Pytanie("Nosi"));
-        w.set("Czy twoj pokemon cos nosi?", "Nosi", FormatOdp.YESNO);
+    	insert(new Pytanie("Kolor"));
+        w.set("Czy masz ulubiony kolor?", "Kolor", FormatOdp.YESNO);
     	retract(w);
 end
 
-rule "Rogi" 
+rule "KolorDwa" salience 2
     when
     	w : Wyswietlanie();
-    	not Pytanie(tekst == "Rogi");
+    	Cecha(tresc == "Kolor");
+    	not Pytanie(tekst == "KolorDwa");
     then
-    	insert(new Pytanie("Rogi"));
-        w.set("Czy twoj pokemon ma rogi?", "Rogi", FormatOdp.YESNO);
-    	retract(w);
-end
-
-rule "RogiKolor"
-    when
-    	w : Wyswietlanie();
-    	Cecha(tresc == "Rogi");
-    	not Pytanie(tekst == "RogiKolor");
-    then
-    	insert(new Pytanie("RogiKolor"));
+    	insert(new Pytanie("KolorDwa"));
     	List<String> opcje = new ArrayList<String>();
-    		opcje.add("Zielonego");
-    		opcje.add("Pomaranczowego");
-    		opcje.add("Kremowego");
-    		opcje.add("Niebieskiego");
-    		opcje.add("Blekitnego");
-    		opcje.add("Czarnego");
-    		opcje.add("Bialego");
-    		opcje.add("Szarego");
-    		opcje.add("Rozowego");
-    		opcje.add("Brazowego");
-    		opcje.add("Fioletowego");
-    		opcje.add("Zoltego");
-        w.set("Jakiego koloru sa rogi/czulki?", "RogiKoloru", FormatOdp.RADIOBUTTON, opcje);
-    	retract(w);
+    		opcje.add("Ró¿owy");
+    		opcje.add("Zielony");
+    		opcje.add("Czarny");
+    		opcje.add("Bia³y");
+    		opcje.add("Czerwony");
+    		opcje.add("Inny");
+        w.set("Jaki jest twój ulubiony kolor?", "Kolor", FormatOdp.RADIOBUTTON, opcje);
+        retract(w);
 end
 
-rule "Ogon" salience 2
+rule "Siedziba" salience 1
     when
     	w : Wyswietlanie();
-    	not Pytanie(tekst == "Ogon");
+    	not Pytanie(tekst == "Siedziba");
     then
-    	insert(new Pytanie("Ogon"));
-        w.set("Czy twoj pokemon ma ogon?", "Ogon", FormatOdp.YESNO);
+    	insert(new Pytanie("Siedziba"));
+        w.set("Czy chcesz miec sta³¹ siedzibê?", "Siedziba", FormatOdp.YESNO);
     	retract(w);
 end
 
-rule "OgonKolor" salience 1
+rule "SiedzibaDwa" salience 2
     when
     	w : Wyswietlanie();
     	Cecha(tresc == "Ogon");
@@ -407,7 +351,7 @@ end
 // ************************************
 
 //Ludzie
-rule "Mag"
+rule "Mag" salience 3
     when
     	w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -416,7 +360,7 @@ rule "Mag"
     	retract(w);
 end
 
-rule "Wojownik"
+rule "Wojownik" salience 3
 	when
 		w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -425,7 +369,7 @@ rule "Wojownik"
     	retract(w);
 end
 
-rule "Paladyn"
+rule "Paladyn" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -435,7 +379,7 @@ rule "Paladyn"
 end
 
 
-rule "£otrzyk"
+rule "£otrzyk" salience 3
 	when
 		w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -444,7 +388,7 @@ rule "£otrzyk"
     	retract(w);
 end
 
-rule "Strzelec"
+rule "Strzelec" salience 3
 	when
 		w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -453,7 +397,7 @@ rule "Strzelec"
     	retract(w);
 end
 
-rule "In¿yniert"
+rule "In¿yniert" salience 3
 	when
 		w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -463,7 +407,7 @@ rule "In¿yniert"
 end
 
 //Orki
-rule "Barbarzynca"
+rule "Barbarzynca" salience 3
 	when
 		w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -473,7 +417,7 @@ rule "Barbarzynca"
 end
 
 
-rule "Szaman"
+rule "Szaman" salience 3
 	when
 		w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -482,7 +426,7 @@ rule "Szaman"
     	retract(w);
 end
 
-rule "Lowca"
+rule "Lowca" salience 3
 	when
 		w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -491,7 +435,7 @@ rule "Lowca"
     	retract(w);
 end
 
-rule "Jezdziec Wilkow"
+rule "Jezdziec Wilkow" salience 3
 	when
 		w : Wyswietlanie();
     	//do uzupe³nienia cechy
@@ -500,7 +444,7 @@ rule "Jezdziec Wilkow"
     	retract(w);
 end
 
-rule "Olbrzym"
+rule "Olbrzym" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -509,7 +453,7 @@ rule "Olbrzym"
     	retract(w);
 end
 
-rule "Gremlin"
+rule "Gremlin" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -519,7 +463,7 @@ rule "Gremlin"
 end
 
 //Elfy
-rule "Uzdrowicie;"
+rule "Uzdrowicie;" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -528,7 +472,7 @@ rule "Uzdrowicie;"
     	retract(w);
 end
 
-rule "Bard"
+rule "Bard" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -537,7 +481,7 @@ rule "Bard"
     	retract(w);
 end
 
-rule "£ucznik"
+rule "£ucznik" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -546,7 +490,7 @@ rule "£ucznik"
     	retract(w);
 end
 
-rule "Assasyn"
+rule "Assasyn" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -555,7 +499,7 @@ rule "Assasyn"
     	retract(w);
 end
 
-rule "Druid"
+rule "Druid" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -564,7 +508,7 @@ rule "Druid"
     	retract(w);
 end
 
-rule "Mêdrzec"
+rule "Mêdrzec" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -574,7 +518,7 @@ rule "Mêdrzec"
 end
 
 //klasy bez rasy
-rule "Dragonborn"
+rule "Dragonborn" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
@@ -583,12 +527,12 @@ rule "Dragonborn"
     	retract(w);
 end
 
-rule "Wiedzmin"
+rule "WiedŸmin" salience 3
 	when
 		w : Wyswietlanie();
 		//do uzupe³nienia cechy
     then
-    	w.set("Wiedzmin", true);        
+    	w.set("WiedŸmin", true);        
     	retract(w);
 end
 

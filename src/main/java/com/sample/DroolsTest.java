@@ -104,8 +104,17 @@ public class DroolsTest {
         					ksession.insert(c);
         				}
         			}
+        		}else if(o.formatOdp == FormatOdp.WIELOKROTYN){
+        			for(JCheckBox i : o.checkBox)
+        			{
+        				if(i.isSelected())
+        				{
+        					c = new Cecha(w.wynik+i);
+        					ksession.insert(c);
+        				}
+        			
+        			}
         		}
-        		
 	            czyDalej = false;
 	            
 	            //wrzucamy wyswietlenie, aby jakas regula sie dopasowala
@@ -139,7 +148,7 @@ public class DroolsTest {
         return kbase;
     }
     
-    public static enum FormatOdp {YESNO, RADIOBUTTON, LIST, NONE};
+    public static enum FormatOdp {YESNO, RADIOBUTTON, LIST, NONE,WIELOKROTYN};
     public static boolean czyDalej;
     public static String odpowiedz;
         
@@ -161,6 +170,8 @@ public class DroolsTest {
     	private JButton dalej;
     	private JLabel pytanie;
     	private JComboBox lista;
+    	public List<JCheckBox> checkBox;
+    	private JCheckBox opcja;
     	private ButtonGroup radioGroup;
     	public List<JRadioButton> radia;
     	private FormatOdp formatOdp;
@@ -171,11 +182,12 @@ public class DroolsTest {
     		czyDalej = false;
     		formatOdp = wybor.getFormatOdp();
     		radia = new ArrayList<JRadioButton>();
+    		checkBox = new ArrayList<JCheckBox>();
     		dalej = new JButton("Dalej");
     		dalej.setBounds(160, 300, 100, 30);
     		dalej.addActionListener(this);
     		add(dalej);
-    		
+
     		pytanie = new JLabel(wybor.getTrescZapytania());
     		pytanie.setBounds(20, 20, 460, 20);
     		add(pytanie);
@@ -186,6 +198,26 @@ public class DroolsTest {
 	    		      lista.addItem(i);
 	    		lista.setBounds(20, 50, 150, 20);
 	    		add(lista);
+	    	}else if(wybor.getFormatOdp() == FormatOdp.WIELOKROTYN)
+	    	{
+	    		JPanel panel = new JPanel();
+	    		int count = 0 ;
+	    		for (String i : wybor.opcje)
+	    		{
+
+	    		
+	    			opcja  =new JCheckBox(i);
+	    			
+	    			checkBox.add(opcja);
+	    			
+	    			panel.add(opcja);
+	    			opcja.setBounds(20, 50+20*count, 200, 20);
+	    			add(opcja);
+	    			count++;
+	    		}
+	    	
+	    		//chcekBox.setBounds(20, 50+20*count, 200, 20);
+	    		
 	    	}else if(wybor.getFormatOdp() == FormatOdp.RADIOBUTTON){
 	    		radioGroup = new ButtonGroup();
 	    		int count = 0;
