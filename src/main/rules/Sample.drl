@@ -402,428 +402,199 @@ rule "Jezyk"
 end
 
 // ************************************
-//			POKEMONY
-rule "Bulbasaur"
+//			Pasuj¹ce Rasy i Klasy 
+//				20 klas
+// ************************************
+
+//Ludzie
+rule "Mag"
     when
     	w : Wyswietlanie();
-    	Cecha(tresc == "Nogi4");
-    	Cecha(tresc == "NogiKoloruZielonego");
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "OczyKoloruCzerwonego");
-    	Cecha(tresc == "Wzor");
-    	Cecha(tresc == "Pazury");
-    	Cecha(tresc == "Zeby");
-    	Cecha(tresc == "UszyKoloruZielonego");
-    	Cecha(tresc == "Nosi");
+    	//do uzupe³nienia cechy
     then
-    	w.set("Bulbasaur", true);        
+    	w.set("Mag", true);        
     	retract(w);
 end
 
-rule "Charizard"
+rule "Wojownik"
 	when
 		w : Wyswietlanie();
-    	Cecha(tresc == "Nogi2");
-    	Cecha(tresc == "NogiKoloruPomaranczowego");
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "Pazury");
-    	Cecha(tresc == "Zeby");
-		Cecha(tresc == "RogiKoloruPomaranczowego");
-		(or Cecha(tresc == "OgonKoloruPomaranczowego");
-			Cecha(tresc == "OgonKoloruKremowego");
-		)
-		(or Cecha(tresc == "SkrzydlaKoloruPomaranczowego");
-			Cecha(tresc == "SkrzydlaKoloruNiebieskiego");
-		)
-		Cecha(tresc == "ReceKoloruPomaranczowego");
+    	//do uzupe³nienia cechy
     then
-    	w.set("Charizard", true);        
+    	w.set("Wojownik", true);        
     	retract(w);
 end
 
-rule "Blastoise"
+rule "Paladyn"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-    	Cecha(tresc == "NogiKoloruNiebieskiego");
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "Pazury");
-    	Cecha(tresc == "UszyKoloruNiebieskiego");
-    	Cecha(tresc == "Nosi");
-    	Cecha(tresc == "ReceKoloruNiebieskiego");
-    	Cecha(tresc == "OgonKoloruNiebieskiego");
-    	Cecha(tresc == "Bron");
+		//do uzupe³nienia cechy
 	then
-	w.set("Blastoise", true);        
+	w.set("Paladyn", true);        
     	retract(w)
 end
 
 
-rule "Butterfree"
+rule "£otrzyk"
 	when
 		w : Wyswietlanie();
-    	Cecha(tresc == "Nogi2");
-    	Cecha(tresc == "NogiKoloruBlekitnego");
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "OczyKoloruCzerwonego");
-    	Cecha(tresc == "Zeby");
-		Cecha(tresc == "RogiKoloruCzarnego");
-		(or Cecha(tresc == "SkrzydlaKoloruBialego");
-			Cecha(tresc == "SkrzydlaKoloruCzarnego");
-		)
-		Cecha(tresc == "ReceKoloruBlekitnego");
+    	//do uzupe³nienia cechy
     then
-    	w.set("Butterfree", true);        
+    	w.set("£otrzyk", true);        
     	retract(w);
 end
 
-rule "Beedrill"
+rule "Strzelec"
 	when
 		w : Wyswietlanie();
-    	Cecha(tresc == "Nogi2");
-    	Cecha(tresc == "NogiKoloruSzarego");
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "OczyKoloruCzerwonego");
-    	Cecha(tresc == "Wzor");
-    	Cecha(tresc == "ReceKoloruSzarego");
-		Cecha(tresc == "RogiKoloruSzarego");
-		(or Cecha(tresc == "SkrzydlaKoloruBialego");
-			Cecha(tresc == "SkrzydlaKoloruCzarnego");
-		)
-		Cecha(tresc == "Bron");
+    	//do uzupe³nienia cechy
     then
-    	w.set("Beedrill", true);        
+    	w.set("Strzelec", true);        
     	retract(w);
 end
 
-rule "Pidgeot"
+rule "In¿yniert"
 	when
 		w : Wyswietlanie();
-    	Cecha(tresc == "Nogi2");
-    	Cecha(tresc == "NogiKoloruRozowego");
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "Pazury");
-    	Cecha(tresc == "OgonKoloruPomaranczowego");
-    	(or Cecha(tresc == "SkrzydlaKoloruBrazowego");
-			Cecha(tresc == "SkrzydlaKoloruKremowego");
-		)
-		Cecha(tresc == "Piora");
-		Cecha(tresc == "Dziob");
+    	//do uzupe³nienia cechy
     then
-    	w.set("Pidgeot", true);        
+    	w.set("In¿ynier", true);        
     	retract(w);
 end
 
-rule "Raticate"
+//Orki
+rule "Barbarzynca"
 	when
 		w : Wyswietlanie();
-    	Cecha(tresc == "Nogi2");
-    	Cecha(tresc == "NogiKoloruKremowego");
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "Pazury");
-    	Cecha(tresc == "Zeby");
-    	Cecha(tresc == "OgonKoloruKremowego");
-    	(or Cecha(tresc == "UszyKoloruBrazowego");
-			Cecha(tresc == "UszyKoloruSzarego");
-		)
-    	Cecha(tresc == "ReceKoloruKremowego");
-
-		Cecha(tresc == "Wasy");
-		Cecha(tresc == "Futro");
+    	//do uzupe³nienia cechy
     then
-    	w.set("Raticate", true);        
+    	w.set("Barbarzynca", true);        
     	retract(w);
 end
 
 
-rule "Arbok"
+rule "Szaman"
 	when
 		w : Wyswietlanie();
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "Wzor");
-    	Cecha(tresc == "Zeby");
-    	Cecha(tresc == "OgonKoloruFioletowego");
-		Cecha(tresc == "Jezyk");
+    	//do uzupe³nienia cechy
     then
-    	w.set("Arbok", true);        
+    	w.set("Szaman", true);        
     	retract(w);
 end
 
-rule "Pikachu"
+rule "Lowca"
 	when
 		w : Wyswietlanie();
-    	Cecha(tresc == "Nogi2");
-    	Cecha(tresc == "NogiKoloruZoltego");
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "OczyKoloruCzarnego");
-    	(or Cecha(tresc == "UszyKoloruZoltego");
-    		Cecha(tresc == "UszyKoloruCzarnego");
-    	)
-    	Cecha(tresc == "ReceKoloruZoltego");
-    	Cecha(tresc == "OgonKoloruZoltego");
+    	//do uzupe³nienia cechy
     then
-    	w.set("Pikachu", true);        
+    	w.set("Lowca", true);        
     	retract(w);
 end
 
-rule "Nidoking"
+rule "Jezdziec Wilkow"
 	when
 		w : Wyswietlanie();
-    	Cecha(tresc == "Nogi2");
-    	(or Cecha(tresc == "NogiKoloruFioletowego");
-    		Cecha(tresc == "NogiKoloruRozowego");
-    	)
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "Pazury");
-    	Cecha(tresc == "Zeby");
-    	(or Cecha(tresc == "UszyKoloruFioletowgo");
-    		Cecha(tresc == "UszyKoloruRozowego");
-    		Cecha(tresc == "UszyKoloruZielony");
-    	)
-    	(or Cecha(tresc == "ReceKoloruFioletowego");
-    		Cecha(tresc == "ReceKoloruRozowego");
-    	)
-    	(or Cecha(tresc == "OgonKoloruFioletowego");
-    		Cecha(tresc == "OgonKoloruRozowego");
-    	)
-    	(or Cecha(tresc == "RogiKoloruFioletowego");
-    		Cecha(tresc == "RogiKoloruRozowego");
-    	)
+    	//do uzupe³nienia cechy
     then
     	w.set("Nidoking", true);        
     	retract(w);
 end
 
-rule "Alakazam"
+rule "Olbrzym"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		(or
-			Cecha(tresc == "NogiKoloruZoltego");
-			Cecha(tresc == "NogiKoloruBrazowego");
-		)
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "Pazury");
-		(or
-			Cecha(tresc == "UszyKoloruZoltego");
-			Cecha(tresc == "RogiKoloruZoltego");
-		)
-		Cecha(tresc == "Nosi");
-		Cecha(tresc == "ReceKoloruZoltego");
-		Cecha(tresc == "Bron");
-		Cecha(tresc == "Wasy");
+		//do uzupe³nienia cechy
     then
-    	w.set("Alakazam", true);        
+    	w.set("Olbrzym", true);        
     	retract(w);
 end
 
-rule "Cubone"
+rule "Gremlin"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		Cecha(tresc == "NogiKoloruBrazowego");
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "Nosi");
-		Cecha(tresc == "ReceKoloruBrazowego");
-		Cecha(tresc == "OgonKoloruBrazowego");
-		Cecha(tresc == "Bron");
+		//do uzupe³nienia cechy
     then
-    	w.set("Cubone", true);        
+    	w.set("Gremlin", true);        
     	retract(w);
 end
 
-rule "Doduo"
+//Elfy
+rule "Uzdrowicie;"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		(or
-			Cecha(tresc == "NogiKoloruBrazowego");
-			Cecha(tresc == "NogiKoloruKremowego");
-		)
-		Cecha(tresc == "Oczy4");
-		Cecha(tresc == "Pazury");
-		Cecha(tresc == "Dziob");
-		Cecha(tresc == "Futro");
+		//do uzupe³nienia cechy
     then
-    	w.set("Doduo", true);        
+    	w.set("Uzdrowiciel", true);        
     	retract(w);
 end
 
-rule "Farfetch'd"
+rule "Bard"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		(or Cecha(tresc == "NogiKoloruZoltego");
-			Cecha(tresc == "NogiKoloruPomaranczowego");
-		)
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "Nosi");
-		Cecha(tresc == "OgonKoloruBrazowego");
-		(or Cecha(tresc == "SkrzydlaKoloruBrazowego");
-			Cecha(tresc == "SkrzydlaKoloruKremowego");
-		)
-		Cecha(tresc == "Bron");
-		Cecha(tresc == "Dziob");
-		Cecha(tresc == "Piora");
+		//do uzupe³nienia cechy
     then
-    	w.set("Farfetch'd", true);        
+    	w.set("Bard", true);        
     	retract(w);
 end
 
-rule "Golduck"
+rule "£ucznik"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		Cecha(tresc == "NogiKoloruNiebieskiego");
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "OczyKoloruCzerwonego");
-		Cecha(tresc == "Pazury");
-		(or
-			Cecha(tresc == "UszyKoloruNiebieskiego");
-			Cecha(tresc == "RogiKoloruNiebieskiego");
-		)
-		Cecha(tresc == "ReceKoloruNiebieskiego");
-		Cecha(tresc == "OgonKoloruNiebieskiego");
-		Cecha(tresc == "DziobKoloruZoltego");
+		//do uzupe³nienia cechy
     then
-    	w.set("Golduck", true);        
+    	w.set("£ucznik", true);        
     	retract(w);
 end
 
-rule "Kabuto"
+rule "Assasyn"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi4");
-		Cecha(tresc == "NogiKoloruBrazowego");
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "OczyKoloruRozowego");
+		//do uzupe³nienia cechy
     then
-    	w.set("Kabuto", true);        
+    	w.set("Assasyn", true);        
     	retract(w);
 end
 
-rule "Lickitung"
+rule "Druid"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		Cecha(tresc == "NogiKoloruRozowego");
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "Wzor");
-		Cecha(tresc == "OgonKoloruRozowego");
-		Cecha(tresc == "Jezyk");
+		//do uzupe³nienia cechy
     then
-    	w.set("Lickitung", true);        
+    	w.set("Druid", true);        
     	retract(w);
 end
 
-rule "Parasect"
+rule "Mêdrzec"
 	when
 		w : Wyswietlanie();
-		(or Cecha(tresc == "Nogi4"); // or 6?
-			Cecha(tresc == "Nogi6");
-		)
-		Cecha(tresc == "NogiKoloruPomaranczowego");
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "OczyKoloruBialego");
-		Cecha(tresc == "Wzor");
-		Cecha(tresc == "Nosi");
-		Cecha(tresc == "ReceKoloruPomaranczowego"); // szczypce to rece?
+		//do uzupe³nienia cechy
     then
-    	w.set("Parasect", true);        
+    	w.set("Mêdrzec", true);        
     	retract(w);
 end
 
-rule "Pinsir"
+//klasy bez rasy
+rule "Dragonborn"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		Cecha(tresc == "NogiKoloruBrazowego");
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "Pazury");
-		Cecha(tresc == "Kly");
-		Cecha(tresc == "ReceKoloruBrazowego");
-		Cecha(tresc == "RogiKoloruSzarego");
+		//do uzupe³nienia cechy
     then
-    	w.set("Pinsir", true);        
+    	w.set("Dragonborn", true);        
     	retract(w);
 end
 
-rule "Primeape"
+rule "Wiedzmin"
 	when
 		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		Cecha(tresc == "NogiKoloruBrazowego");
-		Cecha(tresc == "Oczy2");
-		(or
-			Cecha(tresc == "UszyKoloruKremowego");
-			Cecha(tresc == "UszyKoloruBialego");
-		)
-		Cecha(tresc == "ReceKoloruBrazowego");
-		Cecha(tresc == "Futro");
+		//do uzupe³nienia cechy
     then
-    	w.set("Primeape", true);        
+    	w.set("Wiedzmin", true);        
     	retract(w);
 end
 
 
-rule "Venonat"
-	when
-		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		Cecha(tresc == "NogiKoloruKremowego");
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "OczyKoloruRozowego");
-		Cecha(tresc == "RogiKoloruBialego");
-		Cecha(tresc == "Futro");
-    then
-    	w.set("Venonat", true);        
-    	retract(w);
-end
 
-rule "Electrabuzz"
-	when
-		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		(or
-			Cecha(tresc == "NogiKoloruZoltego");
-			Cecha(tresc == "NogiKoloruCzarnego");
-		)
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "Wzor");
-		Cecha(tresc == "Pazury");
-		Cecha(tresc == "Zeby");
-		(or
-			Cecha(tresc == "ReceKoloruZoltego");
-			Cecha(tresc == "ReceKoloruCzarnego");
-		)
-		(or
-			Cecha(tresc == "OgonKoloruCzarnego");
-			Cecha(tresc == "OgonKoloruZoltego");
-		)
-		Cecha(tresc == "RogiKoloruZoltego");
-    then
-    	w.set("Electrabuzz", true);        
-    	retract(w);
-end
-
-rule "Gyarados"
-	when
-		w : Wyswietlanie();
-		Cecha(tresc == "Oczy2");
-		Cecha(tresc == "Wzor"); //?
-		Cecha(tresc == "Zeby");
-		(or
-			Cecha(tresc == "OgonKoloruBlekitnego");
-			Cecha(tresc == "OgonKoloruSzarego");
-			Cecha(tresc == "OgonKoloruKremowego");
-		)
-		Cecha(tresc == "RogiKoloruBlekitnego");
-		Cecha(tresc == "Wasy");
-    then
-    	w.set("Gyarados", true);        
-    	retract(w);
-end
-
+/* Przyk³ad rule z odpowiedzi¹
 rule "Arcanine"
 	when
 		w : Wyswietlanie();
@@ -841,51 +612,4 @@ rule "Arcanine"
     	w.set("Arcanine", true);        
     	retract(w);
 end
-
-rule "Slowbro"
-	when
-		w : Wyswietlanie();
-		Cecha(tresc == "Nogi2");
-		Cecha(tresc == "NogiKoloruRozowego");
-		Cecha(tresc == "Oczy4");
-		Cecha(tresc == "Pazury");
-		Cecha(tresc == "Zeby");
-		Cecha(tresc == "ReceKoloruRozowego");
-		Cecha(tresc == "UszyKoloruRozowego");
-		Cecha(tresc == "OgonKoloruSzarego");
-    then
-    	w.set("Slowbro", true);        
-    	retract(w);
-end
-
-rule "Tauros"
-	when
-		w : Wyswietlanie();
-		Cecha(tresc == "Nogi4");
-		(or
-			Cecha(tresc == "NogiKoloruKremowy");
-    		Cecha(tresc == "NogiKoloruBrazowego");
-    	)
-    	Cecha(tresc == "Oczy2");
-    	(or
-    		Cecha(tresc == "OgonKoloruSzarego");
-    		Cecha(tresc == "OgonKoloruBrazowego");
-    	)
-    	Cecha(tresc == "RogiKoloruSzarego");
-    	Cecha(tresc == "Futro");
-    then
-    	w.set("Tauros", true);        
-    	retract(w);
-end
-
-rule "Shellder"
-	when
-		w : Wyswietlanie();
-    	Cecha(tresc == "Oczy2");
-    	Cecha(tresc == "Nosi"); //?
-    	Cecha(tresc == "RogiKoloruFioletowego");
-    	Cecha(tresc == "Jezyk");
-    then
-    	w.set("Shellder", true);        
-    	retract(w);
-end
+*/

@@ -70,13 +70,13 @@ public class DroolsTest {
             	
             	//jezeli w wyswietleniu jest pokemon wynikowy to konczymy
             	if (w.czyWynik == true){
-           		 	w = new Wyswietlanie("Twoj pokemon to: " + w.wynik, FormatOdp.NONE);
+           		 	w = new Wyswietlanie("Preferowana postaæ dla ciebie to: " + w.wynik, FormatOdp.NONE);
            		 	break;
             	}
             	
             	//jezeli pytanie jest takie jak bylo poprzednio to zadna regula sie nie odpalila
             	if(w.getTrescZapytania() == wOld){
-            		 w = new Wyswietlanie("Nie ma pokemona z tymi cechami :(", FormatOdp.NONE);
+            		 w = new Wyswietlanie("Nie ma klasy spe³niaj¹cej twoje wymagania, zagraj magiem, bedzie fajnie :)", FormatOdp.NONE);
             		 break;
             	}
             	wOld = w.getTrescZapytania();
