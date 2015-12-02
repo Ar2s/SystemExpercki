@@ -177,7 +177,7 @@ public class DroolsTest {
     	private FormatOdp formatOdp;
     	
     	public Okno(Wyswietlanie wybor){
-    		super("Pokemony");
+    		super("Wybór postaci");
     		setLayout(null);
     		czyDalej = false;
     		formatOdp = wybor.getFormatOdp();
