@@ -159,6 +159,12 @@ public class DroolsTest {
     	public Window(Display wybor){
     		super("Wybór rasy i klasy");
         	setLayout(null);
+        	try {
+        		setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("image/tiara.bmp")))));
+        	} 
+        	catch (IOException e) {
+        		e.printStackTrace();
+        	}
     		next = false;
     		QuestionType = wybor.getQuestionType();
     		radia = new ArrayList<JRadioButton>();

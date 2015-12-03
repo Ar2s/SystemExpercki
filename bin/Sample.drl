@@ -118,7 +118,7 @@ rule "WszechstronnyDwa" salience 2
     		warianty.add("Inteligencja");
     		warianty.add("Spryt");
     		warianty.add("Si³a");
-        w.setResult ("Jaka Attribute  jest dla Ciebie najwa¿niejsza?", "", QuestionType.YESNO);
+        w.setResult ("Jaki atrybut  jest dla Ciebie najwa¿niejsza?", "", QuestionType.YESNO);
     	retract(w);
 end
 
