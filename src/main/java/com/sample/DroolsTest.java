@@ -24,8 +24,8 @@ import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.rule.QueryResults;
 import org.drools.runtime.rule.QueryResultsRow;
-
-/**
+import com.sample.*;
+/*
  * This is a sample class to launch a rule.
  */
 
@@ -37,7 +37,7 @@ public class DroolsTest {
 	private static Attribute attribute;
 	
     public static final void main(String[] args) {
-        try {
+        try { 
             KnowledgeBase kbase = readKnowledgeBase();
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");

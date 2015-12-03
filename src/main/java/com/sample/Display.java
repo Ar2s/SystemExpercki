@@ -3,8 +3,7 @@ package com.sample;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sample.DroolsTest.QuestionType;
-
+import com.sample.DroolsTest.*;
 public class Display{
 	private String question;
 	private QuestionType QuestionType;
