@@ -5,83 +5,82 @@ import java.util.List;
 import java.util.ArrayList;
  
 query "Display"
-    w : Display();
+    q : Display();
 end
 
 /* 
 		PYTANIA
-		10 pytañ g³ownych, 11 szczegó³oweych i 6 ogolnych
 */
 
 
 
 rule "Wielkosc" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Wielkosc");
+    	q : Display();
+    	not Question (text == "Wielkosc");
     then
     	insert(new Question ("Wielkosc"));
-        w.setResult ("Czy wielkoœæ twojej postaci ma znaczenie?", "Wielkosc", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy wielkoœæ twojej postaci ma znaczenie?", "Wielkosc", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "WielkoscDwa" salience 2
     when
-    	w : Display();
-    	Attribute (tresc == "Wielkosc");
-    	not Question (tekst == "WielkoscDwa");
+    	q : Display();
+    	Attribute (content == "Wielkosc");
+    	not Question (text == "WielkoscDwa");
     then
     	insert(new Question ("WielkoscDwa"));
     	List<String> variants = new ArrayList<String>();
     		variants.add("Ma³y");
     		variants.add("Du¿y");
     		variants.add("Wielki");
-        w.setResult ("Jak du¿y chcia³byœ byæ?", "", QuestionType.SIMPLECHOICE, variants);
-    	retract(w);
+        q.setResult ("Jak du¿y chcia³byœ byæ?", "", QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
 end
 
 
 rule "Wiek" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Wiek");
+    	q : Display();
+    	not Question (text == "Wiek");
     then
     	insert(new Question ("Wiek"));
-        w.setResult ("Czy wiek towjej postaci ma znaczenie?", "Wiek", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy wiek towjej postaci ma znaczenie?", "Wiek", QuestionType.YESNO);
+    	retract(q);
 end
 
 
-rule "WiekDwa" salience 2
+rule "WiekSzczegol" salience 2
     when
-    	w : Display();
-    	Attribute (tresc == "Wiek");
-    	not Question (tekst == "WiekDwa");
+    	q : Display();
+    	Attribute (content == "Wiek");
+    	not Question (text == "WiekSzczegol");
     then
-    	insert(new Question ("WiekDwa"));
+    	insert(new Question ("WiekSzczegol"));
     	List<String> variants = new ArrayList<String>();
     		variants.add("M³oda");
     		variants.add("W œrednim wieku");
     		variants.add("Stara");
-        w.setResult ("Jaki wiek twojej postac preferujesz?", "", QuestionType.SIMPLECHOICE, variants);
-    	retract(w);
+        q.setResult ("Jaki wiek twojej postac preferujesz?", "", QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
 end
 
 rule "Walczy" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Walczy");
+    	q : Display();
+    	not Question (text == "Walczy");
     then
     	insert(new Question ("Walczy"));
-        w.setResult ("Czy chcesz walczyæ?", "Walczy", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy chcesz walczyæ?", "Walczy", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "Bron" salience 2
     when
-    	w : Display();
-    	Attribute (tresc == "Walczy");
-    	not Question (tekst == "Bron");
+    	q : Display();
+    	Attribute (content == "Walczy");
+    	not Question (text == "Bron");
     then
     	insert(new Question ("Bron"));
     	List<String> variants = new ArrayList<String>();
@@ -93,53 +92,54 @@ rule "Bron" salience 2
     		variants.add("Pistolet");
     		variants.add("Sztylety");
     		variants.add("Maczuga");
-        w.setResult ("Jakie bronie lubisz?", "",  QuestionType.MULTICHOICE, variants);
-    	retract(w);
+        q.setResult ("Jakie bronie lubisz?", "",  QuestionType.MULTICHOICE, variants);
+    	retract(q);
 end
 
 rule "Wszechstronny" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Wszechstronny");
+    	q : Display();
+    	not Question (text == "Wszechstronny");
     then
     	insert(new Question ("Wszechstronny"));
-        w.setResult ("Czy chcesz byæ wszechstronny(ale nie wybitny w konkretnej dziedzinie)?", "Wszechstronny", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy chcesz byæ wszechstronny(ale nie wybitny w konkretnej dziedzinie)?", "Wszechstronny", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "WszechstronnyDwa" salience 2
     when
-    	w : Display();
-    	Attribute ( tresc == "Wszechstronny");
-    	not Question (tekst == "WszechstronnyDwa");
+    	q : Display();
+    	Question(text == "Wszechstronny");
+    	not Attribute ( content == "Wszechstronny");
+    	not Question (text == "WszechstronnyDwa");
     then
     	insert(new Question ("WszechstronnyDwa"));
     	List<String> variants = new ArrayList<String>();
     		variants.add("Inteligencja");
     		variants.add("Spryt");
     		variants.add("Si³a");
-        w.setResult ("Jaki cecha jest dla Ciebie najwa¿niejsza?", "", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Jaki cecha jest dla Ciebie najwa¿niejsza?", "", QuestionType.YESNO);
+    	retract(q);
 end
 
 
 
 rule "Zaklecia" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Zaklecia");
+    	q : Display();
+    	not Question (text == "Zaklecia");
     then
     	insert(new Question ("Zaklecia"));
-        w.setResult ("Czy chcesz u¿ywac zaklêæ?", "Zaklecia", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy chcesz u¿ywac zaklêæ?", "Zaklecia", QuestionType.YESNO);
+    	retract(q);
 end
 
 
 rule "ZakleciaDwa" salience 2
     when
-    	w : Display();
-    	Attribute (tresc == "Zaklecia");
-    	not Question (tekst == "ZakleciaDwa");
+    	q : Display();
+    	Attribute (content == "Zaklecia");
+    	not Question (text == "ZakleciaDwa");
     then
     	insert(new Question ("ZakleciaDwa"));
     	List<String> variants = new ArrayList<String>();
@@ -147,26 +147,26 @@ rule "ZakleciaDwa" salience 2
     		variants.add("Wojenne");
     		variants.add("Kl¹twy");
     		variants.add("Wspieraj¹ce");
-        w.setResult ("Jakie zaklêcia wolisz?", "Zaklecia", QuestionType.SIMPLECHOICE, variants);
-    	retract(w);
+        q.setResult ("Jakie zaklêcia wolisz?", "Zaklecia", QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
 end
 
 
 rule "Kolor" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Kolor");
+    	q : Display();
+    	not Question (text == "Kolor");
     then
     	insert(new Question ("Kolor"));
-        w.setResult ("Czy masz ulubiony kolor?", "Kolor", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy masz ulubiony kolor?", "Kolor", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "KolorDwa" salience 2
     when
-    	w : Display();
-    	Attribute (tresc == "Kolor");
-    	not Question (tekst == "KolorDwa");
+    	q : Display();
+    	Attribute (content == "Kolor");
+    	not Question (text == "KolorDwa");
     then
     	insert(new Question ("KolorDwa"));
     	List<String> variants = new ArrayList<String>();
@@ -176,25 +176,25 @@ rule "KolorDwa" salience 2
     		variants.add("Bia³y");
     		variants.add("Czerwony");
     		variants.add("Inny");
-        w.setResult ("Jaki jest twój ulubiony kolor?", "Kolor", QuestionType.SIMPLECHOICE, variants);
-        retract(w);
+        q.setResult ("Jaki jest twój ulubiony kolor?", "Kolor", QuestionType.SIMPLECHOICE, variants);
+        retract(q);
 end
 
 rule "Siedziba" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Siedziba");
+    	q : Display();
+    	not Question (text == "Siedziba");
     then
     	insert(new Question ("Siedziba"));
-        w.setResult ("Czy chcesz mieæ sta³¹ siedzibê?", "Siedziba", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy chcesz mieæ sta³¹ siedzibê?", "Siedziba", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "SiedzibaDwa" salience 2
     when
-    	w : Display();
-    	Attribute (tresc == "Siedziba");
-    	not Question (tekst == "SiedzibaDwa");
+    	q : Display();
+    	Attribute (content == "Siedziba");
+    	not Question (text == "SiedzibaDwa");
     then
     	insert(new Question ("SiedzibaDwa"));
     	List<String> variants = new ArrayList<String>();
@@ -203,25 +203,25 @@ rule "SiedzibaDwa" salience 2
     		variants.add("W grocie");
     		variants.add("W wie¿y");
     		variants.add("W domu");
-        w.setResult ("Gdzie chcia³byœ zamieszkaæ?", "", QuestionType.SIMPLECHOICE, variants);
-    	retract(w);
+        q.setResult ("Gdzie chcia³byœ zamieszkaæ?", "", QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
 end
 
 rule "Pancerz" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Pancerz");
+    	q : Display();
+    	not Question (text == "Pancerz");
     then
     	insert(new Question ("Pancerz"));
-        w.setResult ("Czy chcesz byc opancerzony?", "Pancerz", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy chcesz byc opancerzony?", "Pancerz", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "PancerzDwa" salience 2
     when
-    	w : Display();
-    	Attribute (tresc == "Pancerz");
-    	not Question (tekst == "PancerzDwa");
+    	q : Display();
+    	Attribute (content == "Pancerz");
+    	not Question (text == "PancerzDwa");
     then
     	insert(new Question ("PancerzDwa"));
     	List<String> variants = new ArrayList<String>();
@@ -231,59 +231,59 @@ rule "PancerzDwa" salience 2
     		variants.add("Lekka zbroja");
     		variants.add("Skórzana zbroja");
     		
-        w.setResult ("Jaki pancerz?", "", QuestionType.MULTICHOICE, variants);
-    	retract(w);
+        q.setResult ("Jaki pancerz?", "", QuestionType.MULTICHOICE, variants);
+    	retract(q);
 end
 
 rule "Wegetarianin" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Wegetarianin");
+    	q : Display();
+    	not Question (text == "Wegetarianin");
     then
     	insert(new Question ("Wegetarianin"));
-        w.setResult ("Czy jesteœ wegetarianinem?", "Wegetarianin", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy jesteœ wegetarianinem?", "Wegetarianin", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "Mieso" salience 2
     when
-    	w : Display();
-    	not Attribute  (tresc == "Wegetarianin");
-    	Question (tekst == "Wegetarianin");
-    	not Question (tekst == "Mieso");
+    	q : Display();
+    	not Attribute  (content == "Wegetarianin");
+    	Question (text == "Wegetarianin");
+    	not Question (text == "Mieso");
     then
     	insert(new Question ("Mieso"));
-        w.setResult ("Czy zjad³byœ miêso cz³onka w³asnej rasy?", "Mieso", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy zjad³byœ miêso cz³onka w³asnej rasy?", "Mieso", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "Zwierze" salience 1
     when
-    	w : Display();
-    	not Question (tekst == "Zwierze");
+    	q : Display();
+    	not Question (text == "Zwierze");
     then
     	insert(new Question ("Zwierze"));
-        w.setResult ("Czy lubisz zwierzêta?", "Zwierze", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy lubisz zwierzêta?", "Zwierze", QuestionType.YESNO);
+    	retract(q);
 end
  
 rule "ZwierzDwa" salience 2
     when
-    	w : Display();
-    	Attribute  (tresc == "Zwierze");
-    	not Question (tekst == "ZwierzeDwa");
+    	q : Display();
+    	Attribute  (content == "Zwierze");
+    	not Question (text == "ZwierzeDwa");
     then
     	insert(new Question ("ZwierzeDwa"));
-        w.setResult ("Czy chcia³byœ mieæ zwierzê?", "MaZwierze", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy chcia³byœ mieæ zwierzê?", "MaZwierze", QuestionType.YESNO);
+    	retract(q);
 end
 
 
 rule "ZwierzeTrzy" salience 3
     when
-    	w : Display();
-    	Attribute ( tresc == "MaZwierze");
-    	not Question (tekst == "ZwierzeTrzy");
+    	q : Display();
+    	Attribute ( content == "MaZwierze");
+    	not Question (text == "ZwierzeTrzy");
     then
     	insert(new Question ("ZwierzeTrzy"));
     	List<String> variants = new ArrayList<String>();
@@ -291,35 +291,35 @@ rule "ZwierzeTrzy" salience 3
     		variants.add("Wilka");
     		variants.add("Kruka");
     		variants.add("Sowê");
-        w.setResult ("Jakie zwierzê chcia³byœ mieæ?", "",  QuestionType.SIMPLECHOICE, variants);
-    	retract(w);
+        q.setResult ("Jakie zwierzê chcia³byœ mieæ?", "",  QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
 end
 
 
 rule "Uczciwy" 
     when
-    	w : Display();
-    	not Question (tekst == "Uczciwy");
+    	q : Display();
+    	not Question (text == "Uczciwy");
     then
     	insert(new Question ("Uczciwy"));
-        w.setResult ("Czy znasz pojêcie uczciwoœci?", "Uczciwy", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy znasz pojêcie uczciwoœci?", "Uczciwy", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "Piekny" 
     when
-    	w : Display();
-    	not Question (tekst == "Piekny");
+    	q : Display();
+    	not Question (text == "Piekny");
     then
     	insert(new Question ("Piekny"));
-        w.setResult ("Czy chcesz byæ ³adny?", "Piekny", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy chcesz byæ ³adny?", "Piekny", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "Hobby" 
     when
-    	w : Display();
-    	not Question (tekst == "Hobby");
+    	q : Display();
+    	not Question (text == "Hobby");
     then
     	insert(new Question ("Hobby"));
     	List<String> variants = new ArrayList<String>();
@@ -330,38 +330,38 @@ rule "Hobby"
     		variants.add("Numizmatyka");
     		variants.add("Zbieranie kamieni");
     		variants.add("Zbieranie wszystkiego");
-        w.setResult ("Jakie jest Twoje hobby?", "",  QuestionType.MULTICHOICE, variants);
-    	retract(w);
+        q.setResult ("Jakie jest Twoje hobby?", "",  QuestionType.MULTICHOICE, variants);
+    	retract(q);
 end
 
 rule "Dobry" 
     when
-    	w : Display();
-    	not Question (tekst == "Dobro");
+    	q : Display();
+    	not Question (text == "Dobro");
     then
     	insert(new Question ("Dobro"));
-        w.setResult ("Czy chcesz czyniæ dobro?", "Dobry", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy chcesz czyniæ dobro?", "Dobry", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "Szybki" 
     when
-    	w : Display();
-    	not Question (tekst == "Szybki");
+    	q : Display();
+    	not Question (text == "Szybki");
     then
     	insert(new Question ("Szybki"));
-        w.setResult ("Czy lubisz prêdkoœæ?", "Szybki", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy lubisz prêdkoœæ?", "Szybki", QuestionType.YESNO);
+    	retract(q);
 end
 
 rule "Wynalazki" 
     when
-    	w : Display();
-    	not Question (tekst == "Wynalazki");
+    	q : Display();
+    	not Question (text == "Wynalazki");
     then
     	insert(new Question ("Wynalazki"));
-        w.setResult ("Czy lubisz gad¿ety/wynalazki?", "Wynalazki", QuestionType.YESNO);
-    	retract(w);
+        q.setResult ("Czy lubisz gad¿ety/wynalazki?", "Wynalazki", QuestionType.YESNO);
+    	retract(q);
 end
 /* 
 					 Postacie
@@ -371,452 +371,468 @@ end
 // ******************Ludzie*********************
 rule "Mag" salience 3
     when
-    	w : Display();
-    	Attribute ( tresc == "Stary");
-		Attribute ( tresc == "Kostur");
-		Attribute ( tresc == "Ineligencja");
-		Attribute ( tresc == "W Wie¿y");
-		Attribute ( tresc == "Lekka zbroja");
-		Attribute ( tresc == "Sowê");
-		Attribute ( tresc == "Ksiêgi");
+    	q : Display();
+    	Attribute ( content == "Stary");
+		Attribute ( content == "Kostur");
+		Attribute ( content == "Ineligencja");
+		Attribute ( content == "W Wie¿y");
+		Attribute ( content == "Lekka zbroja");
+		Attribute ( content == "Sowê");
+		Attribute ( content == "Ksiêgi");
     then
-    	w.setResult ("Mag.", true);        
-    	retract(w);
+    	q.setResult ("Mag.", true);        
+    	retract(q);
 end
 
 rule "Wojownik" salience 3
 	when
-		w : Display();
-    	Attribute ( tresc == "Du¿y");
-		Attribute ( tresc == "M³oda");
+		q : Display();
+    	Attribute ( content == "Du¿y");
+		Attribute ( content == "M³oda");
 		(or
-			Attribute ( tresc == "Miecz");
-			Attribute ( tresc == "Topór");
-			Attribute ( tresc == "£uk");
+			Attribute ( content == "Miecz");
+			Attribute ( content == "Topór");
+			Attribute ( content == "£uk");
 			)
-		Attribute ( tresc == "Si³a");
-		Attribute ( tresc == "W chacie");
-		Attribute ( tresc == "Ciê¿ka zbroja");
+		Attribute ( content == "Si³a");
+		Attribute ( content == "W chacie");
+		Attribute ( content == "Ciê¿ka zbroja");
     then
-    	w.setResult ("Wojownik.", true);        
-    	retract(w);
+    	q.setResult ("Wojownik.", true);        
+    	retract(q);
 end
 
 rule "Paladyn" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Du¿y");
-		Attribute ( tresc == "MaZwierze");
-		Attribute ( tresc == "M³oda");
-		Attribute ( tresc == "Miecz");
-		Attribute ( tresc == "ZakleciaWspieraj¹ce");
-		Attribute ( tresc == "W chacie");
+		q : Display();
+		Attribute ( content == "Du¿y");
+		Attribute ( content == "MaZwierze");
+		Attribute ( content == "M³oda");
+		Attribute ( content == "Miecz");
+		Attribute ( content == "ZakleciaWspieraj¹ce");
+		Attribute ( content == "W chacie");
 		(or
-			Attribute ( tresc == "Ciê¿ka Zbroja");
-			Attribute ( tresc == "Tarcza");
+			Attribute ( content == "Ciê¿ka Zbroja");
+			Attribute ( content == "Tarcza");
 			)
-		Attribute ( tresc == "Konia");
-		Attribute ( tresc == "Uczciwy");
-		Attribute ( tresc == "Dobry");
-		Attribute ( tresc == "Szybki");
+		Attribute ( content == "Konia");
+		Attribute ( content == "Uczciwy");
+		Attribute ( content == "Dobry");
+		Attribute ( content == "Szybki");
 	then
-	w.setResult ("Paladyn.", true);        
-    	retract(w)
+	q.setResult ("Paladyn.", true);        
+    	retract(q)
 end
 
 rule "£otrzyk" salience 3
 	when
-		w : Display();
-    	Attribute ( tresc == "Ma³y");
-		not Attribute ( tresc == "Uczciwy");
-		Attribute ( tresc == "KolorCzarny");
-		Attribute ( tresc == "M³oda");
-		Attribute ( tresc == "Sztylety");
-		Attribute ( tresc == "Spryt");
-		Attribute ( tresc == "W chacie");
-		Attribute ( tresc == "Lekka zbroja");
-		Attribute ( tresc == "Numizmatyka");
-		Attribute ( tresc == "Szybki");
+		q : Display();
+    	Attribute ( content == "Ma³y");
+		not Attribute ( content == "Uczciwy");
+		Attribute ( content == "KolorCzarny");
+		Attribute ( content == "M³oda");
+		Attribute ( content == "Sztylety");
+		Attribute ( content == "Spryt");
+		Attribute ( content == "W chacie");
+		Attribute ( content == "Lekka zbroja");
+		Attribute ( content == "Numizmatyka");
+		Attribute ( content == "Szybki");
     then
-    	w.setResult ("£otrzyk.", true);        
-    	retract(w);
+    	q.setResult ("£otrzyk.", true);        
+    	retract(q);
 end
 
 rule "Strzelec" salience 3
 	when
-		w : Display();
-    		Attribute ( tresc == "Pistolet");
-			Attribute ( tresc == "Pistolet");
-	    	Attribute ( tresc == "M³oda");
-			Attribute ( tresc == "W chacie");
-			Attribute ( tresc == "Lekka zbroja");
-			Attribute ( tresc == "Skórzana zbroja");
+		q : Display();
+    		Attribute ( content == "Pistolet");
+			Attribute ( content == "Pistolet");
+	    	Attribute ( content == "M³oda");
+			Attribute ( content == "W chacie");
+			Attribute ( content == "Lekka zbroja");
+			Attribute ( content == "Skórzana zbroja");
     then
-    	w.setResult ("Strzelec.", true);        
-    	retract(w);
+    	q.setResult ("Strzelec.", true);        
+    	retract(q);
 end
 
 rule "In¿ynier" salience 3
 	when
-		w : Display();
-    	Attribute ( tresc == "Ma³y");
-		not Attribute ( tresc == "Walczy");
-		Attribute ( tresc == "W œrednim wieku");
-		Attribute ( tresc == "Inteligencja");
-		Attribute ( tresc == "W domu");
-		Attribute ( tresc == "Mechanizmy");
-		Attribute ( tresc == "Dobry");
-		Attribute ( tresc == "Wynalazki");
+		q : Display();
+		(or
+			Attribute ( content == "Mechanizmy");
+			(and
+		    	Attribute ( content == "Ma³y");
+				not Attribute ( content == "Walczy");
+				Attribute ( content == "W œrednim wieku");
+				Attribute ( content == "Inteligencja");
+				Attribute ( content == "W domu");
+				Attribute ( content == "Mechanizmy");
+				Attribute ( content == "Dobry");
+				Attribute ( content == "Wynalazki");
+			)
+		)
     then
-    	w.setResult ("In¿ynier.", true);        
-    	retract(w);
+    	q.setResult ("In¿ynier.", true);        
+    	retract(q);
 end
 
 rule "Mieszczanin" salience 3
 	when
-		w : Display();
-		not Attribute ( tresc == "Walczy");
-		Attribute ( tresc == "W œrednim wieku");
-		Attribute ( tresc == "Wszechstronny");
-		Attribute ( tresc == "W domu");
+		q : Display();
+		not Attribute ( content == "Walczy");
+		Attribute ( content == "W œrednim wieku");
+		Attribute ( content == "Wszechstronny");
+		Attribute ( content == "W domu");
 		(or
-			Attribute ( tresc == "Zabawa");
-			Attribute ( tresc == "Ksiêgi");
+			Attribute ( content == "Zabawa");
+			Attribute ( content == "Ksiêgi");
 		)
     then
-    	w.setResult ("Mieszczanin.", true);        
-    	retract(w);
+    	q.setResult ("Mieszczanin.", true);        
+    	retract(q);
 end
 
 rule "Mnich" salience 3
 	when
-		w : Display();
-		not Attribute ( tresc == "Walczy");
+		q : Display();
+		not Attribute ( content == "Walczy");
 		(or
-			Attribute ( tresc == "Ksiêgi");
-			Attribute ( tresc == "Zielarstwo");
+			Attribute ( content == "Ksiêgi");
+			Attribute ( content == "Zielarstwo");
 		)
 		(or
-			Attribute ( tresc == "ZakleciaLecznicze");
-			Attribute ( tresc == "ZakleciaWspieraj¹ce");
+			Attribute ( content == "ZakleciaLecznicze");
+			Attribute ( content == "ZakleciaWspieraj¹ce");
 		)
-		Attribute ( tresc == "Dobry");
-		Attribute ( tresc == "Uczciwy");
-		Attribute ( tresc == "Zwierze");
+		Attribute ( content == "Dobry");
+		Attribute ( content == "Uczciwy");
+		Attribute ( content == "Zwierze");
     then
-    	w.setResult ("Mnich.", true);        
-    	retract(w);
+    	q.setResult ("Mnich.", true);        
+    	retract(q);
 end
 // *******************Orki*********************
 rule "Barbarzynca" salience 3
 	when
-		w : Display();
-    	Attribute ( tresc == "Du¿y");
+		q : Display();
+    	Attribute ( content == "Du¿y");
 		(or
-			Attribute ( tresc == "Miecz");
-			Attribute ( tresc == "Topór");
-			Attribute ( tresc == "Maczuga");
+			Attribute ( content == "Miecz");
+			Attribute ( content == "Topór");
+			Attribute ( content == "Maczuga");
 		)
-		Attribute ( tresc == "Si³a");
-		Attribute ( tresc == "W grocie");
-		Attribute ( tresc == "Skórzana zbroja");
-		not Attribute ( tresc == "Uczciwy");
-		Attribute ( tresc == "Numizmatyka");
-		Attribute ( tresc == "Mieso");
+		Attribute ( content == "Si³a");
+		Attribute ( content == "W grocie");
+		Attribute ( content == "Skórzana zbroja");
+		not Attribute ( content == "Uczciwy");
+		Attribute ( content == "Numizmatyka");
+		Attribute ( content == "Mieso");
     then
-    	w.setResult ("Barbarzynca.", true);        
-    	retract(w);
+    	q.setResult ("Barbarzynca.", true);        
+    	retract(q);
 end
 
 
 rule "Szaman" salience 3
 	when
-		w : Display();
-    	Attribute ( tresc == "Inteligencja");
-		Attribute ( tresc == "ZakleciaWojenne");
-		Attribute ( tresc == "ZakleciaKl¹twy");
-		Attribute ( tresc == "W wie¿y");
-		Attribute ( tresc == "Lekka zbroja");
-		Attribute ( tresc == "Kruka");
-		Attribute ( tresc == "Ksiêgi");
-		Attribute ( tresc == "Mieso");
+		q : Display();
+		(or
+			Attribute ( content == "ZakleciaKl¹twy");
+			(and
+		    	Attribute ( content == "Inteligencja");
+				Attribute ( content == "ZakleciaWojenne");
+				Attribute ( content == "ZakleciaKl¹twy");
+				Attribute ( content == "W wie¿y");
+				Attribute ( content == "Lekka zbroja");
+				Attribute ( content == "Kruka");
+				Attribute ( content == "Ksiêgi");
+				Attribute ( content == "Mieso");
+			)
+		)
     then
-    	w.setResult ("Szaman.", true);        
-    	retract(w);
+    	q.setResult ("Szaman.", true);        
+    	retract(q);
 end
 
 rule "£owca" salience 3
 	when
-		w : Display();
-    	Attribute ( tresc == "Du¿y");
+		q : Display();
+    	Attribute ( content == "Du¿y");
 		(or
-			Attribute ( tresc == "£uk");
-			Attribute ( tresc == "Kusza");
+			Attribute ( content == "£uk");
+			Attribute ( content == "Kusza");
 		)
-		Attribute ( tresc == "W grocie");
-		Attribute ( tresc == "Lekka zbroja");
-		Attribute ( tresc == "Wilka");
+		Attribute ( content == "W grocie");
+		Attribute ( content == "Lekka zbroja");
+		Attribute ( content == "Wilka");
     then
-    	w.setResult ("£owca.", true);        
-    	retract(w);
+    	q.setResult ("£owca.", true);        
+    	retract(q);
 end
 
 rule "Jezdziec Wilkow" salience 3
 	when
-		w : Display();
-    	Attribute ( tresc == "Du¿y");
-    	Attribute ( tresc == "MaZwierze");
+		q : Display();
+    	Attribute ( content == "Du¿y");
+    	Attribute ( content == "MaZwierze");
 		(or
-			Attribute ( tresc == "Miecz");
-			Attribute ( tresc == "Topór");
+			Attribute ( content == "Miecz");
+			Attribute ( content == "Topór");
 		)
 		(or
-			Attribute ( tresc == "Spryt");
-			Attribute ( tresc == "Si³a");
+			Attribute ( content == "Spryt");
+			Attribute ( content == "Si³a");
 		)
-		Attribute ( tresc == "W grocie");
-		Attribute ( tresc == "Skórzana zbroja");
-    	Attribute ( tresc == "Wilka");
-    	Attribute ( tresc == "Szybki");
+		Attribute ( content == "W grocie");
+		Attribute ( content == "Skórzana zbroja");
+    	Attribute ( content == "Wilka");
+    	Attribute ( content == "Szybki");
     then
-    	w.setResult ("JeŸdziec Wilkow.", true);        
-    	retract(w);
+    	q.setResult ("JeŸdziec Wilkoq.", true);        
+    	retract(q);
 end
 
 rule "Olbrzym" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Wielki");
-		Attribute ( tresc == "Maczuga");
-    	Attribute ( tresc == "Si³a");
-    	Attribute ( tresc == "W grocie");
-    	Attribute ( tresc == "Zieranie kamieni");
+		q : Display();
+		(or
+			Attribute ( content == "Zieranie kamieni");
+			Attribute ( content == "Wielki");
+			(and
+				Attribute ( content == "Wielki");
+				Attribute ( content == "Maczuga");
+		    	Attribute ( content == "Si³a");
+		    	Attribute ( content == "W grocie");
+		    	Attribute ( content == "Zieranie kamieni");
+		    )
+		)
     then
-    	w.setResult ("Olbrzym.", true);        
-    	retract(w);
+    	q.setResult ("Olbrzym.", true);        
+    	retract(q);
 end
 
 rule "Gremlin" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Ma³y");
-		not Attribute ( tresc == "Uczciwy");
+		q : Display();
+		Attribute ( content == "Ma³y");
+		not Attribute ( content == "Uczciwy");
     	(or
-    		Attribute ( tresc == "£uk");
-    		Attribute ( tresc == "Sztylety");
+    		Attribute ( content == "£uk");
+    		Attribute ( content == "Sztylety");
     	)
-    	Attribute ( tresc == "Spryt");
-    	Attribute ( tresc == "W grocie");
-    	Attribute ( tresc == "Lekka zbroja");
-    	Attribute ( tresc == "Zbieranie wszystkiego");
+    	Attribute ( content == "Spryt");
+    	Attribute ( content == "W grocie");
+    	Attribute ( content == "Lekka zbroja");
+    	Attribute ( content == "Zbieranie wszystkiego");
     then
-    	w.setResult ("Gremlin.", true);        
-    	retract(w);
+    	q.setResult ("Gremlin.", true);        
+    	retract(q);
 end
 
 //Elfy
 rule "Uzdrowicie;" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Piekny");
-    	not Attribute ( tresc == "Walczy");
-    	Attribute ( tresc == "Inteligencja");
+		q : Display();
+		Attribute ( content == "Piekny");
+    	not Attribute ( content == "Walczy");
+    	Attribute ( content == "Inteligencja");
     	(or
-    		Attribute ( tresc == "ZakleciaLecznicze");
-    		Attribute ( tresc == "ZakleciaWspierajace");
+    		Attribute ( content == "ZakleciaLecznicze");
+    		Attribute ( content == "ZakleciaWspierajace");
     		)
-    	Attribute ( tresc == "W lesie");
-    	Attribute ( tresc == "Sowê");
-    	Attribute ( tresc == "Uczciwy");
-    	Attribute ( tresc == "Ksiêgi");
-    	Attribute ( tresc == "Zielarstwo");
-    	Attribute ( tresc == "Dobry");
-    	Attribute ( tresc == "Wegetarianin");
+    	Attribute ( content == "W lesie");
+    	Attribute ( content == "Sowê");
+    	Attribute ( content == "Uczciwy");
+    	Attribute ( content == "Ksiêgi");
+    	Attribute ( content == "Zielarstwo");
+    	Attribute ( content == "Dobry");
+    	Attribute ( content == "Wegetarianin");
     then
-    	w.setResult ("Uzdrowiciel.", true);        
-    	retract(w);
+    	q.setResult ("Uzdrowiciel.", true);        
+    	retract(q);
 end
 
 rule "Bard" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Piekny");
-    	not Attribute ( tresc == "Walczy");
-    	Attribute ( tresc == "KolorRó¿owy");
-    	Attribute ( tresc == "Konia");
-    	Attribute ( tresc == "Zabawa");
-    	Attribute ( tresc == "Wegetarianin");
+		q : Display();
+		Attribute ( content == "Piekny");
+    	not Attribute ( content == "Walczy");
+    	Attribute ( content == "KolorRó¿owy");
+    	Attribute ( content == "Konia");
+    	Attribute ( content == "Zabawa");
+    	Attribute ( content == "Wegetarianin");
     then
-    	w.setResult ("Bard.", true);        
-    	retract(w);
+    	q.setResult ("Bard.", true);        
+    	retract(q);
 end
 
 rule "£ucznik" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Piekny");
-    	Attribute ( tresc == "£uk");
-    	Attribute ( tresc == "W lesie");
-    	Attribute ( tresc == "Lekka zbroja");
+		q : Display();
+		Attribute ( content == "Piekny");
+    	Attribute ( content == "£uk");
+    	Attribute ( content == "W lesie");
+    	Attribute ( content == "Lekka zbroja");
     	(or
-    		Attribute ( tresc == "Konia");
-    		Attribute ( tresc == "Wilka");
+    		Attribute ( content == "Konia");
+    		Attribute ( content == "Wilka");
     	)
-    	Attribute ( tresc == "Uczciwy");
-    	Attribute ( tresc == "Szybki");
+    	Attribute ( content == "Uczciwy");
+    	Attribute ( content == "Szybki");
     then
-    	w.setResult ("£ucznik.", true);        
-    	retract(w);
+    	q.setResult ("£ucznik.", true);        
+    	retract(q);
 end
 
 rule "Assasyn" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Piekny");
-    	Attribute ( tresc == "KolorCzarny");
+		q : Display();
+		Attribute ( content == "Piekny");
+    	Attribute ( content == "KolorCzarny");
     	(or
-    		Attribute ( tresc == "Miecz");
-    		Attribute ( tresc == "Kusza");
-    		Attribute ( tresc == "£uk");
-    		Attribute ( tresc == "Sztylety");
+    		Attribute ( content == "Miecz");
+    		Attribute ( content == "Kusza");
+    		Attribute ( content == "£uk");
+    		Attribute ( content == "Sztylety");
     	)
-    	Attribute ( tresc == "Spryt");
-    	Attribute ( tresc == "W lesie");
-    	Attribute ( tresc == "Lekka zbroja");
-    	Attribute ( tresc == "Szybki");
+    	Attribute ( content == "Spryt");
+    	Attribute ( content == "W lesie");
+    	Attribute ( content == "Lekka zbroja");
+    	Attribute ( content == "Szybki");
     then
-    	w.setResult ("Assasyn.", true);        
-    	retract(w);
+    	q.setResult ("Assasyn.", true);        
+    	retract(q);
 end
 
 rule "Druid" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "MaZwierze");
-    	not Attribute ( tresc == "Walczy");
-    	Attribute ( tresc == "KolorZielony");
-    	Attribute ( tresc == "W lesie");
+		q : Display();
+		Attribute ( content == "MaZwierze");
+    	not Attribute ( content == "Walczy");
+    	Attribute ( content == "KolorZielony");
+    	Attribute ( content == "W lesie");
     	(or
-    		Attribute ( tresc == "Wilka");
-    		Attribute ( tresc == "Kruka");
+    		Attribute ( content == "Wilka");
+    		Attribute ( content == "Kruka");
     	)
-    	Attribute ( tresc == "Uczciwy");
-    	Attribute ( tresc == "Dobry");
-    	Attribute ( tresc == "Wegetarianin");
+    	Attribute ( content == "Uczciwy");
+    	Attribute ( content == "Dobry");
+    	Attribute ( content == "Wegetarianin");
     then
-    	w.setResult ("Druid.", true);        
-    	retract(w);
+    	q.setResult ("Druid.", true);        
+    	retract(q);
 end
 
 rule "Mêdrzec" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Stary");
-    	not Attribute ( tresc == "Walczy");
-    	Attribute ( tresc == "Inteligencja");
+		q : Display();
+		Attribute ( content == "Stary");
+    	not Attribute ( content == "Walczy");
+    	Attribute ( content == "Inteligencja");
     	(or
-    		Attribute ( tresc == "ZakleciaLecznicze");
-    		Attribute ( tresc == "ZakleciaWojenne");
+    		Attribute ( content == "ZakleciaLecznicze");
+    		Attribute ( content == "ZakleciaWojenne");
     	)
-    	Attribute ( tresc == "W wie¿y");
-    	Attribute ( tresc == "Sowê");
-    	Attribute ( tresc == "Uczciwy");
-    	Attribute ( tresc == "Ksiêgi");
-    	Attribute ( tresc == "Zielarstwo");
-    	Attribute ( tresc == "Wegetarianin");
+    	Attribute ( content == "W wie¿y");
+    	Attribute ( content == "Sowê");
+    	Attribute ( content == "Uczciwy");
+    	Attribute ( content == "Ksiêgi");
+    	Attribute ( content == "Zielarstwo");
+    	Attribute ( content == "Wegetarianin");
     then
-    	w.setResult ("Mêdrzec.", true);        
-    	retract(w);
+    	q.setResult ("Mêdrzec.", true);        
+    	retract(q);
 end
 
 // *************klasy bez rasy**********************
 rule "Dragonborn" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "MaZwierze");
-		Attribute ( tresc == "Wszechstronny");
-		Attribute ( tresc == "KolorCzerwony");
+		q : Display();
+		Attribute ( content == "MaZwierze");
+		Attribute ( content == "Wszechstronny");
+		Attribute ( content == "KolorCzerwony");
 		(or
-		Attribute ( tresc == "Miecz");
-		Attribute ( tresc == "Topór");
-		Attribute ( tresc == "Kusza");
-		Attribute ( tresc == "£uk");
+		Attribute ( content == "Miecz");
+		Attribute ( content == "Topór");
+		Attribute ( content == "Kusza");
+		Attribute ( content == "£uk");
 		)
-		Attribute ( tresc == "Si³a");
-		Attribute ( tresc == "ZakleciaWojenne");
-		Attribute ( tresc == "Ciê¿ka zbrojê");
-		Attribute ( tresc == "He³m z rogami");
-		Attribute ( tresc == "Konia");
-		Attribute ( tresc == "bieranie wszystkiego");
-		Attribute ( tresc == "Szybki");
+		Attribute ( content == "Si³a");
+		Attribute ( content == "ZakleciaWojenne");
+		Attribute ( content == "Ciê¿ka zbrojê");
+		Attribute ( content == "He³m z rogami");
+		Attribute ( content == "Konia");
+		Attribute ( content == "bieranie wszystkiego");
+		Attribute ( content == "Szybki");
 		
     then
-    	w.setResult ("Dragonborn.", true);        
-    	retract(w);
+    	q.setResult ("Dragonborn.", true);        
+    	retract(q);
 end
  
 rule "Z³odziej" salience 3
 	when
-		w : Display();
-		not Attribute ( tresc == "Walczy");
-		Attribute ( tresc == "Szybki");
-		not Attribute ( tresc == "Uczciwy");
-		Attribute ( tresc == "W chacie");
-		Attribute ( tresc == "Zbieranie wszystkiego");
-		Attribute ( tresc == "Numizmatyka ");
-		Attribute ( tresc == "Wynalazki");
+		q : Display();
+		not Attribute ( content == "Walczy");
+		Attribute ( content == "Szybki");
+		not Attribute ( content == "Uczciwy");
+		Attribute ( content == "W chacie");
+		Attribute ( content == "Zbieranie wszystkiego");
+		Attribute ( content == "Numizmatyka ");
+		Attribute ( content == "Wynalazki");
 	then
-		w.setResult ("WiedŸmin.",true);	
-		retract(w);
+		q.setResult ("WiedŸmin.",true);	
+		retract(q);
 end
 
 rule "Pijak" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "Walczy");
-		Attribute ( tresc == "Zielarstwo");
-		Attribute ( tresc == "W chacie");
-		Attribute ( tresc == "Stary ");
-		Attribute ( tresc == "Zbieranie wszystkiego");
-		not Attribute ( tresc == "Szybki");
+		q : Display();
+		Attribute ( content == "Walczy");
+		Attribute ( content == "Zielarstwo");
+		Attribute ( content == "W chacie");
+		Attribute ( content == "Stary ");
+		Attribute ( content == "Zbieranie wszystkiego");
+		not Attribute ( content == "Szybki");
 	then
-		w.setResult ("Pijak.",true);	
-		retract(w);
+		q.setResult ("Pijak.",true);	
+		retract(q);
 end
 
 rule "WiedŸmin" salience 3
 	when
-		w : Display();
-		Attribute ( tresc == "MaZwierze");
-		Attribute ( tresc == "KolorBia³y");
+		q : Display();
+		Attribute ( content == "MaZwierze");
+		Attribute ( content == "KolorBia³y");
 		(or
-			Attribute ( tresc == "Miecz");
-			Attribute ( tresc == "Kusza");
+			Attribute ( content == "Miecz");
+			Attribute ( content == "Kusza");
 		)
-		Attribute ( tresc == "ZakleciaWojenne");
-		Attribute ( tresc == "Skórzana zbroja");
-		Attribute ( tresc == "Konia");
-		Attribute ( tresc == "Zielarstwo");
-		Attribute ( tresc == "Szybki");
+		Attribute ( content == "ZakleciaWojenne");
+		Attribute ( content == "Skórzana zbroja");
+		Attribute ( content == "Konia");
+		Attribute ( content == "Zielarstwo");
+		Attribute ( content == "Szybki");
     then
-    	w.setResult ("WiedŸmin.", true);        
-    	retract(w);
+    	q.setResult ("WiedŸmin.", true);        
+    	retract(q);
 end
 
 rule "Brak dopasowania, graj magiem" salience -1
 	when
-		w : Display();
+		q : Display();
 		Attribute ();
 		
     then
-    	w.setResult ("Brak dopasowania, zagraj magiem, bêdzie fajnie :)", true);        
-    	retract(w);
+    	q.setResult ("Brak dopasowania, zagraj magiem, bêdzie fajnie :)", true);        
+    	retract(q);
 end
 
 rule "Czego chcesz" salience -2
 	when
-		w : Display();
+		q : Display();
     then
-    	w.setResult ("Nie wiesz czego chcesz!", true);        
-    	retract(w);
+    	q.setResult ("Nie wiesz czego chcesz!", true);        
+    	retract(q);
 end

@@ -38,7 +38,7 @@ public class DroolsTest {
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
 
-            display = new Display("Za³ó¿ tiarê, i odpowiadaj na pytania, wtedy Ci pomo¿e.", QuestionType.NONE);
+            display = new Display("Za³ó¿ tiarê, i odpowiadaj na pytania, pomogê.", QuestionType.NONE);
             window = new Window(display);
            
             ksession.insert(display);
@@ -60,7 +60,7 @@ public class DroolsTest {
             	}
             	
             	if (display.resultBool == true){
-            		display = new Display("Wynik: " + display.result, QuestionType.NONE);
+            		display = new Display("Proponowana postaæ: " + display.result, QuestionType.NONE);
            		 	break;
             	}
 
@@ -75,13 +75,13 @@ public class DroolsTest {
             	
         		if(window.QuestionType == QuestionType.SIMPLECHOICE){
         			attribute = new Attribute(display.result + answer);
-        			System.out.println(attribute.tresc);
+        			System.out.println(attribute.content);
         			ksession.insert(attribute);
         		}else if(window.QuestionType == QuestionType.YESNO){
         			for(JRadioButton i :window.radioButtonList){
         				if ((i.isSelected())&& i.getText() == "Tak"){
         					attribute = new Attribute(display.result);
-        					System.out.println(attribute.tresc);
+        					System.out.println(attribute.content);
         					ksession.insert(attribute);
         				}
         			}
@@ -91,7 +91,7 @@ public class DroolsTest {
         				if(i.isSelected())
         				{
         					attribute = new Attribute(display.result+i.getText());
-        					System.out.println(attribute.tresc);
+        					System.out.println(attribute.content);
         					ksession.insert(attribute);
         				}
         			
@@ -132,16 +132,16 @@ public class DroolsTest {
     public static String answer;
         
     public static class Attribute{
-    	public String tresc;
-    	public Attribute(String tresc){
-    		this.tresc = tresc;
+    	public String content;
+    	public Attribute(String content){
+    		this.content = content;
     	}
     	
     }
     public static class Question{
-    	public String tekst;
-    	public Question(String tekst){
-    		this.tekst = tekst;
+    	public String text;
+    	public Question(String text){
+    		this.text = text;
     	}
     }
         
@@ -155,8 +155,7 @@ public class DroolsTest {
     	private QuestionType QuestionType;
     	
     	public Window(Display wybor){
-    		super("Wybór rasy i klasy");
-    		
+    		super("Magiczna Tiara Przydzia³u");
         	this.Refresh(wybor);
         	setLocation(Toolkit.getDefaultToolkit().getScreenSize().width/2 - 250, Toolkit.getDefaultToolkit().getScreenSize().height/2 - 300);
     		setSize(600, 600); 
