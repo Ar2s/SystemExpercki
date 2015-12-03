@@ -3,7 +3,7 @@ package com.sample
 import com.sample.DroolsTest.*;
 import java.util.List;
 import java.util.ArrayList;
- 
+  
 query "Display"
     w : Display();
 end
