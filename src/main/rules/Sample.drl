@@ -13,289 +13,6 @@ end
 */
 
 
-
-rule "Wielkosc" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Wielkosc");
-    then
-    	insert(new Question ("Wielkosc"));
-        q.setResult ("Czy wielkoœæ twojej postaci ma znaczenie?", "Wielkosc", QuestionType.YESNO);
-    	retract(q);
-end
-
-rule "WielkoscDwa" salience 2
-    when
-    	q : Display();
-    	Attribute (content == "Wielkosc");
-    	not Question (text == "WielkoscDwa");
-    then
-    	insert(new Question ("WielkoscDwa"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("Ma³y");
-    		variants.add("Du¿y");
-    		variants.add("Wielki");
-        q.setResult ("Jak du¿y chcia³byœ byæ?", "", QuestionType.SIMPLECHOICE, variants);
-    	retract(q);
-end
-
-
-rule "Wiek" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Wiek");
-    then
-    	insert(new Question ("Wiek"));
-        q.setResult ("Czy wiek towjej postaci ma znaczenie?", "Wiek", QuestionType.YESNO);
-    	retract(q);
-end
-
-
-rule "WiekSzczegol" salience 2
-    when
-    	q : Display();
-    	Attribute (content == "Wiek");
-    	not Question (text == "WiekSzczegol");
-    then
-    	insert(new Question ("WiekSzczegol"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("M³oda");
-    		variants.add("W œrednim wieku");
-    		variants.add("Stara");
-        q.setResult ("Jaki wiek twojej postac preferujesz?", "", QuestionType.SIMPLECHOICE, variants);
-    	retract(q);
-end
-
-rule "Walczy" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Walczy");
-    then
-    	insert(new Question ("Walczy"));
-        q.setResult ("Czy chcesz walczyæ?", "Walczy", QuestionType.YESNO);
-    	retract(q);
-end
-
-rule "Bron" salience 2
-    when
-    	q : Display();
-    	Attribute (content == "Walczy");
-    	not Question (text == "Bron");
-    then
-    	insert(new Question ("Bron"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("Miecz");
-    		variants.add("Kostur");
-    		variants.add("Topór");
-    		variants.add("£uk");
-    		variants.add("Kusza");
-    		variants.add("Pistolet");
-    		variants.add("Sztylety");
-    		variants.add("Maczuga");
-        q.setResult ("Jakie bronie lubisz?", "",  QuestionType.MULTICHOICE, variants);
-    	retract(q);
-end
-
-rule "Wszechstronny" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Wszechstronny");
-    then
-    	insert(new Question ("Wszechstronny"));
-        q.setResult ("Czy chcesz byæ wszechstronny(ale nie wybitny w konkretnej dziedzinie)?", "Wszechstronny", QuestionType.YESNO);
-    	retract(q);
-end
-
-rule "WszechstronnyDwa" salience 2
-    when
-    	q : Display();
-    	Question(text == "Wszechstronny");
-    	not Attribute ( content == "Wszechstronny");
-    	not Question (text == "WszechstronnyDwa");
-    then
-    	insert(new Question ("WszechstronnyDwa"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("Inteligencja");
-    		variants.add("Spryt");
-    		variants.add("Si³a");
-        q.setResult ("Jaki cecha jest dla Ciebie najwa¿niejsza?", "", QuestionType.YESNO);
-    	retract(q);
-end
-
-
-
-rule "Zaklecia" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Zaklecia");
-    then
-    	insert(new Question ("Zaklecia"));
-        q.setResult ("Czy chcesz u¿ywac zaklêæ?", "Zaklecia", QuestionType.YESNO);
-    	retract(q);
-end
-
-
-rule "ZakleciaDwa" salience 2
-    when
-    	q : Display();
-    	Attribute (content == "Zaklecia");
-    	not Question (text == "ZakleciaDwa");
-    then
-    	insert(new Question ("ZakleciaDwa"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("Lecznicze");
-    		variants.add("Wojenne");
-    		variants.add("Kl¹twy");
-    		variants.add("Wspieraj¹ce");
-        q.setResult ("Jakie zaklêcia wolisz?", "Zaklecia", QuestionType.SIMPLECHOICE, variants);
-    	retract(q);
-end
-
-
-rule "Kolor" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Kolor");
-    then
-    	insert(new Question ("Kolor"));
-        q.setResult ("Czy masz ulubiony kolor?", "Kolor", QuestionType.YESNO);
-    	retract(q);
-end
-
-rule "KolorDwa" salience 2
-    when
-    	q : Display();
-    	Attribute (content == "Kolor");
-    	not Question (text == "KolorDwa");
-    then
-    	insert(new Question ("KolorDwa"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("Ró¿owy");
-    		variants.add("Zielony");
-    		variants.add("Czarny");
-    		variants.add("Bia³y");
-    		variants.add("Czerwony");
-    		variants.add("Inny");
-        q.setResult ("Jaki jest twój ulubiony kolor?", "Kolor", QuestionType.SIMPLECHOICE, variants);
-        retract(q);
-end
-
-rule "Siedziba" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Siedziba");
-    then
-    	insert(new Question ("Siedziba"));
-        q.setResult ("Czy chcesz mieæ sta³¹ siedzibê?", "Siedziba", QuestionType.YESNO);
-    	retract(q);
-end
-
-rule "SiedzibaDwa" salience 2
-    when
-    	q : Display();
-    	Attribute (content == "Siedziba");
-    	not Question (text == "SiedzibaDwa");
-    then
-    	insert(new Question ("SiedzibaDwa"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("W chacie");
-    		variants.add("W lesie");
-    		variants.add("W grocie");
-    		variants.add("W wie¿y");
-    		variants.add("W domu");
-        q.setResult ("Gdzie chcia³byœ zamieszkaæ?", "", QuestionType.SIMPLECHOICE, variants);
-    	retract(q);
-end
-
-rule "Pancerz" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Pancerz");
-    then
-    	insert(new Question ("Pancerz"));
-        q.setResult ("Czy chcesz byc opancerzony?", "Pancerz", QuestionType.YESNO);
-    	retract(q);
-end
-
-rule "PancerzDwa" salience 2
-    when
-    	q : Display();
-    	Attribute (content == "Pancerz");
-    	not Question (text == "PancerzDwa");
-    then
-    	insert(new Question ("PancerzDwa"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("Ciê¿ka zbroja");
-    		variants.add("He³m z rogami");
-    		variants.add("Tarcza");
-    		variants.add("Lekka zbroja");
-    		variants.add("Skórzana zbroja");
-    		
-        q.setResult ("Jaki pancerz?", "", QuestionType.MULTICHOICE, variants);
-    	retract(q);
-end
-
-rule "Wegetarianin" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Wegetarianin");
-    then
-    	insert(new Question ("Wegetarianin"));
-        q.setResult ("Czy jesteœ wegetarianinem?", "Wegetarianin", QuestionType.YESNO);
-    	retract(q);
-end
-
-rule "Mieso" salience 2
-    when
-    	q : Display();
-    	not Attribute  (content == "Wegetarianin");
-    	Question (text == "Wegetarianin");
-    	not Question (text == "Mieso");
-    then
-    	insert(new Question ("Mieso"));
-        q.setResult ("Czy zjad³byœ miêso cz³onka w³asnej rasy?", "Mieso", QuestionType.YESNO);
-    	retract(q);
-end
-
-rule "Zwierze" salience 1
-    when
-    	q : Display();
-    	not Question (text == "Zwierze");
-    then
-    	insert(new Question ("Zwierze"));
-        q.setResult ("Czy lubisz zwierzêta?", "Zwierze", QuestionType.YESNO);
-    	retract(q);
-end
- 
-rule "ZwierzDwa" salience 2
-    when
-    	q : Display();
-    	Attribute  (content == "Zwierze");
-    	not Question (text == "ZwierzeDwa");
-    then
-    	insert(new Question ("ZwierzeDwa"));
-        q.setResult ("Czy chcia³byœ mieæ zwierzê?", "MaZwierze", QuestionType.YESNO);
-    	retract(q);
-end
-
-
-rule "ZwierzeTrzy" salience 3
-    when
-    	q : Display();
-    	Attribute ( content == "MaZwierze");
-    	not Question (text == "ZwierzeTrzy");
-    then
-    	insert(new Question ("ZwierzeTrzy"));
-    	List<String> variants = new ArrayList<String>();
-    		variants.add("Konia");
-    		variants.add("Wilka");
-    		variants.add("Kruka");
-    		variants.add("Sowê");
-        q.setResult ("Jakie zwierzê chcia³byœ mieæ?", "",  QuestionType.SIMPLECHOICE, variants);
-    	retract(q);
-end
-
-
 rule "Uczciwy" 
     when
     	q : Display();
@@ -306,7 +23,7 @@ rule "Uczciwy"
     	retract(q);
 end
 
-rule "Piekny" 
+rule "Piekny"
     when
     	q : Display();
     	not Question (text == "Piekny");
@@ -363,13 +80,296 @@ rule "Wynalazki"
         q.setResult ("Czy lubisz gad¿ety/wynalazki?", "Wynalazki", QuestionType.YESNO);
     	retract(q);
 end
+
+rule "Wielkosc" 
+    when
+    	q : Display();
+    	not Question (text == "Wielkosc");
+    then
+    	insert(new Question ("Wielkosc"));
+        q.setResult ("Czy wielkoœæ twojej postaci ma znaczenie?", "Wielkosc", QuestionType.YESNO);
+    	retract(q);
+end
+
+rule "WielkoscDwa" salience 1
+    when
+    	q : Display();
+    	Attribute (content == "Wielkosc");
+    	not Question (text == "WielkoscDwa");
+    then
+    	insert(new Question ("WielkoscDwa"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Ma³y");
+    		variants.add("Du¿y");
+    		variants.add("Wielki");
+        q.setResult ("Jak du¿y chcia³byœ byæ?", "", QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
+end
+
+
+rule "Wiek" 
+    when
+    	q : Display();
+    	not Question (text == "Wiek");
+    then
+    	insert(new Question ("Wiek"));
+        q.setResult ("Czy wiek towjej postaci ma znaczenie?", "Wiek", QuestionType.YESNO);
+    	retract(q);
+end
+
+
+rule "WiekSzczegol" salience 1
+    when
+    	q : Display();
+    	Attribute (content == "Wiek");
+    	not Question (text == "WiekSzczegol");
+    then
+    	insert(new Question ("WiekSzczegol"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("M³oda");
+    		variants.add("W œrednim wieku");
+    		variants.add("Stara");
+        q.setResult ("Jaki wiek twojej postac preferujesz?", "", QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
+end
+
+rule "Walczy" 
+    when
+    	q : Display();
+    	not Question (text == "Walczy");
+    then
+    	insert(new Question ("Walczy"));
+        q.setResult ("Czy chcesz walczyæ?", "Walczy", QuestionType.YESNO);
+    	retract(q);
+end
+
+rule "Bron" salience 1
+    when
+    	q : Display();
+    	Attribute (content == "Walczy");
+    	not Question (text == "Bron");
+    then
+    	insert(new Question ("Bron"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Miecz");
+    		variants.add("Kostur");
+    		variants.add("Topór");
+    		variants.add("£uk");
+    		variants.add("Kusza");
+    		variants.add("Pistolet");
+    		variants.add("Sztylety");
+    		variants.add("Maczuga");
+        q.setResult ("Jakie bronie lubisz?", "",  QuestionType.MULTICHOICE, variants);
+    	retract(q);
+end
+
+rule "Wszechstronny" 
+    when
+    	q : Display();
+    	not Question (text == "Wszechstronny");
+    then
+    	insert(new Question ("Wszechstronny"));
+        q.setResult ("Czy chcesz byæ wszechstronny(ale nie wybitny w konkretnej dziedzinie)?", "Wszechstronny", QuestionType.YESNO);
+    	retract(q);
+end
+
+rule "WszechstronnyDwa" salience 1
+    when
+    	q : Display();
+    	Question(text == "Wszechstronny");
+    	not Attribute ( content == "Wszechstronny");
+    	not Question (text == "WszechstronnyDwa");
+    then
+    	insert(new Question ("WszechstronnyDwa"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Inteligencja");
+    		variants.add("Spryt");
+    		variants.add("Si³a");
+        q.setResult ("Jaki cecha jest dla Ciebie najwa¿niejsza?", "", QuestionType.YESNO);
+    	retract(q);
+end
+
+
+
+rule "Zaklecia" 
+    when
+    	q : Display();
+    	not Question (text == "Zaklecia");
+    then
+    	insert(new Question ("Zaklecia"));
+        q.setResult ("Czy chcesz u¿ywac zaklêæ?", "Zaklecia", QuestionType.YESNO);
+    	retract(q);
+end
+
+
+rule "ZakleciaDwa" salience 1
+    when
+    	q : Display();
+    	Attribute (content == "Zaklecia");
+    	not Question (text == "ZakleciaDwa");
+    then
+    	insert(new Question ("ZakleciaDwa"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Lecznicze");
+    		variants.add("Wojenne");
+    		variants.add("Kl¹twy");
+    		variants.add("Wspieraj¹ce");
+        q.setResult ("Jakie zaklêcia wolisz?", "Zaklecia", QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
+end
+
+
+rule "Kolor" 
+    when
+    	q : Display();
+    	not Question (text == "Kolor");
+    then
+    	insert(new Question ("Kolor"));
+        q.setResult ("Czy masz ulubiony kolor?", "Kolor", QuestionType.YESNO);
+    	retract(q);
+end
+
+rule "KolorDwa" salience 1
+    when
+    	q : Display();
+    	Attribute (content == "Kolor");
+    	not Question (text == "KolorDwa");
+    then
+    	insert(new Question ("KolorDwa"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Ró¿owy");
+    		variants.add("Zielony");
+    		variants.add("Czarny");
+    		variants.add("Bia³y");
+    		variants.add("Czerwony");
+    		variants.add("Inny");
+        q.setResult ("Jaki jest twój ulubiony kolor?", "Kolor", QuestionType.SIMPLECHOICE, variants);
+        retract(q);
+end
+
+rule "Siedziba" 
+    when
+    	q : Display();
+    	not Question (text == "Siedziba");
+    then
+    	insert(new Question ("Siedziba"));
+        q.setResult ("Czy chcesz mieæ sta³¹ siedzibê?", "Siedziba", QuestionType.YESNO);
+    	retract(q);
+end
+
+rule "SiedzibaDwa" salience 1
+    when
+    	q : Display();
+    	Attribute (content == "Siedziba");
+    	not Question (text == "SiedzibaDwa");
+    then
+    	insert(new Question ("SiedzibaDwa"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("W chacie");
+    		variants.add("W lesie");
+    		variants.add("W grocie");
+    		variants.add("W wie¿y");
+    		variants.add("W domu");
+        q.setResult ("Gdzie chcia³byœ zamieszkaæ?", "", QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
+end
+
+rule "Pancerz" 
+    when
+    	q : Display();
+    	not Question (text == "Pancerz");
+    then
+    	insert(new Question ("Pancerz"));
+        q.setResult ("Czy chcesz byc opancerzony?", "Pancerz", QuestionType.YESNO);
+    	retract(q);
+end
+
+rule "PancerzDwa" salience 1
+    when
+    	q : Display();
+    	Attribute (content == "Pancerz");
+    	not Question (text == "PancerzDwa");
+    then
+    	insert(new Question ("PancerzDwa"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Ciê¿ka zbroja");
+    		variants.add("He³m z rogami");
+    		variants.add("Tarcza");
+    		variants.add("Lekka zbroja");
+    		variants.add("Skórzana zbroja");
+    		
+        q.setResult ("Jaki pancerz?", "", QuestionType.MULTICHOICE, variants);
+    	retract(q);
+end
+
+rule "Wegetarianin" 
+    when
+    	q : Display();
+    	not Question (text == "Wegetarianin");
+    then
+    	insert(new Question ("Wegetarianin"));
+        q.setResult ("Czy jesteœ wegetarianinem?", "Wegetarianin", QuestionType.YESNO);
+    	retract(q);
+end
+
+rule "Mieso" salience 1
+    when
+    	q : Display();
+    	not Attribute  (content == "Wegetarianin");
+    	Question (text == "Wegetarianin");
+    	not Question (text == "Mieso");
+    then
+    	insert(new Question ("Mieso"));
+        q.setResult ("Czy zjad³byœ miêso cz³onka w³asnej rasy?", "Mieso", QuestionType.YESNO);
+    	retract(q);
+end
+
+rule "Zwierze" 
+    when
+    	q : Display();
+    	not Question (text == "Zwierze");
+    then
+    	insert(new Question ("Zwierze"));
+        q.setResult ("Czy lubisz zwierzêta?", "Zwierze", QuestionType.YESNO);
+    	retract(q);
+end
+ 
+rule "ZwierzDwa" salience 1
+    when
+    	q : Display();
+    	Attribute  (content == "Zwierze");
+    	not Question (text == "ZwierzeDwa");
+    then
+    	insert(new Question ("ZwierzeDwa"));
+        q.setResult ("Czy chcia³byœ mieæ zwierzê?", "MaZwierze", QuestionType.YESNO);
+    	retract(q);
+end
+
+
+rule "ZwierzeTrzy" salience 1
+    when
+    	q : Display();
+    	Attribute ( content == "MaZwierze");
+    	not Question (text == "ZwierzeTrzy");
+    then
+    	insert(new Question ("ZwierzeTrzy"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Konia");
+    		variants.add("Wilka");
+    		variants.add("Kruka");
+    		variants.add("Sowê");
+        q.setResult ("Jakie zwierzê chcia³byœ mieæ?", "",  QuestionType.SIMPLECHOICE, variants);
+    	retract(q);
+end
+
+
 /* 
 					 Postacie
 						26 
 */
 
 // ******************Ludzie*********************
-rule "Mag" salience 3
+rule "Mag" 
     when
     	q : Display();
     	Attribute ( content == "Stary");
@@ -384,7 +384,7 @@ rule "Mag" salience 3
     	retract(q);
 end
 
-rule "Wojownik" salience 3
+rule "Wojownik" 
 	when
 		q : Display();
     	Attribute ( content == "Du¿y");
@@ -402,7 +402,7 @@ rule "Wojownik" salience 3
     	retract(q);
 end
 
-rule "Paladyn" salience 3
+rule "Paladyn" 
 	when
 		q : Display();
 		Attribute ( content == "Du¿y");
@@ -424,7 +424,7 @@ rule "Paladyn" salience 3
     	retract(q)
 end
 
-rule "£otrzyk" salience 3
+rule "£otrzyk" 
 	when
 		q : Display();
     	Attribute ( content == "Ma³y");
@@ -442,7 +442,7 @@ rule "£otrzyk" salience 3
     	retract(q);
 end
 
-rule "Strzelec" salience 3
+rule "Strzelec" 
 	when
 		q : Display();
     		Attribute ( content == "Pistolet");
@@ -456,7 +456,7 @@ rule "Strzelec" salience 3
     	retract(q);
 end
 
-rule "In¿ynier" salience 3
+rule "In¿ynier" 
 	when
 		q : Display();
 		(or
@@ -477,7 +477,7 @@ rule "In¿ynier" salience 3
     	retract(q);
 end
 
-rule "Mieszczanin" salience 3
+rule "Mieszczanin" 
 	when
 		q : Display();
 		not Attribute ( content == "Walczy");
@@ -493,7 +493,7 @@ rule "Mieszczanin" salience 3
     	retract(q);
 end
 
-rule "Mnich" salience 3
+rule "Mnich" 
 	when
 		q : Display();
 		not Attribute ( content == "Walczy");
@@ -513,7 +513,7 @@ rule "Mnich" salience 3
     	retract(q);
 end
 // *******************Orki*********************
-rule "Barbarzynca" salience 3
+rule "Barbarzynca" 
 	when
 		q : Display();
     	Attribute ( content == "Du¿y");
@@ -534,7 +534,7 @@ rule "Barbarzynca" salience 3
 end
 
 
-rule "Szaman" salience 3
+rule "Szaman" 
 	when
 		q : Display();
 		(or
@@ -555,7 +555,7 @@ rule "Szaman" salience 3
     	retract(q);
 end
 
-rule "£owca" salience 3
+rule "£owca" 
 	when
 		q : Display();
     	Attribute ( content == "Du¿y");
@@ -571,7 +571,7 @@ rule "£owca" salience 3
     	retract(q);
 end
 
-rule "Jezdziec Wilkow" salience 3
+rule "Jezdziec Wilkow" 
 	when
 		q : Display();
     	Attribute ( content == "Du¿y");
@@ -593,7 +593,7 @@ rule "Jezdziec Wilkow" salience 3
     	retract(q);
 end
 
-rule "Olbrzym" salience 3
+rule "Olbrzym" 
 	when
 		q : Display();
 		(or
@@ -612,7 +612,7 @@ rule "Olbrzym" salience 3
     	retract(q);
 end
 
-rule "Gremlin" salience 3
+rule "Gremlin" 
 	when
 		q : Display();
 		Attribute ( content == "Ma³y");
@@ -631,7 +631,7 @@ rule "Gremlin" salience 3
 end
 
 //Elfy
-rule "Uzdrowicie;" salience 3
+rule "Uzdrowicie;" 
 	when
 		q : Display();
 		Attribute ( content == "Piekny");
@@ -653,7 +653,7 @@ rule "Uzdrowicie;" salience 3
     	retract(q);
 end
 
-rule "Bard" salience 3
+rule "Bard" 
 	when
 		q : Display();
 		Attribute ( content == "Piekny");
@@ -667,7 +667,7 @@ rule "Bard" salience 3
     	retract(q);
 end
 
-rule "£ucznik" salience 3
+rule "£ucznik" 
 	when
 		q : Display();
 		Attribute ( content == "Piekny");
@@ -685,7 +685,7 @@ rule "£ucznik" salience 3
     	retract(q);
 end
 
-rule "Assasyn" salience 3
+rule "Assasyn" 
 	when
 		q : Display();
 		Attribute ( content == "Piekny");
@@ -705,7 +705,7 @@ rule "Assasyn" salience 3
     	retract(q);
 end
 
-rule "Druid" salience 3
+rule "Druid" 
 	when
 		q : Display();
 		Attribute ( content == "MaZwierze");
@@ -724,7 +724,7 @@ rule "Druid" salience 3
     	retract(q);
 end
 
-rule "Mêdrzec" salience 3
+rule "Mêdrzec" 
 	when
 		q : Display();
 		Attribute ( content == "Stary");
@@ -746,7 +746,7 @@ rule "Mêdrzec" salience 3
 end
 
 // *************klasy bez rasy**********************
-rule "Dragonborn" salience 3
+rule "Dragonborn" 
 	when
 		q : Display();
 		Attribute ( content == "MaZwierze");
@@ -771,7 +771,7 @@ rule "Dragonborn" salience 3
     	retract(q);
 end
  
-rule "Z³odziej" salience 3
+rule "Z³odziej" 
 	when
 		q : Display();
 		not Attribute ( content == "Walczy");
@@ -786,7 +786,7 @@ rule "Z³odziej" salience 3
 		retract(q);
 end
 
-rule "Pijak" salience 3
+rule "Pijak" 
 	when
 		q : Display();
 		Attribute ( content == "Walczy");
@@ -800,7 +800,7 @@ rule "Pijak" salience 3
 		retract(q);
 end
 
-rule "WiedŸmin" salience 3
+rule "WiedŸmin" 
 	when
 		q : Display();
 		Attribute ( content == "MaZwierze");

@@ -29,14 +29,13 @@ import javax.swing.*;
 public class DroolsTest {
 	private static Display display;
 	private static Window window;
-	
 	private static Attribute attribute;
 	
     public static final void main(String[] args) {
         try {
             KnowledgeBase kbase = readKnowledgeBase();
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
-            KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
+            KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "tiara");
 
             display = new Display("Za³ó¿ tiarê, i odpowiadaj na pytania, pomogê.", QuestionType.NONE);
             window = new Window(display);
@@ -45,7 +44,7 @@ public class DroolsTest {
             
         	while(next == false){
 			    try {
-			       Thread.sleep(200);
+			       Thread.sleep(100);
 			    } catch(InterruptedException ex) {
 			    }
 			}
@@ -94,7 +93,6 @@ public class DroolsTest {
         					System.out.println(attribute.content);
         					ksession.insert(attribute);
         				}
-        			
         			}
         		}
 	            next = false;
@@ -109,7 +107,6 @@ public class DroolsTest {
         } catch (Throwable t) {
             t.printStackTrace();
         }
-        System.out.println("Koniec");
     }
 
     private static KnowledgeBase readKnowledgeBase() throws Exception {
@@ -136,7 +133,6 @@ public class DroolsTest {
     	public Attribute(String content){
     		this.content = content;
     	}
-    	
     }
     public static class Question{
     	public String text;
@@ -201,31 +197,30 @@ public class DroolsTest {
 	    		radioGroup = new ButtonGroup();
 	    		int count = 0;
 	    		for(String i :wybor.variants){
-	    	    	JRadioButton radio;
+	    	    	JRadioButton radioButton;
 	    	    	if(count == 0){
-	    	    		radio = new JRadioButton(i, true);
+	    	    		radioButton = new JRadioButton(i, true);
 	    	    	}else{
-	    	    		radio = new JRadioButton(i, false);
+	    	    		radioButton = new JRadioButton(i, false);
 	    	    	}
-	    	    	radio.setBounds(25, 70+25*count, 200, 20);
-	    	    	radioGroup.add(radio);
-	    	    	radioButtonList.add(radio);
-	    	    	add(radio);
+	    	    	radioButton.setBounds(25, 70+25*count, 200, 20);
+	    	    	radioGroup.add(radioButton);
+	    	    	radioButtonList.add(radioButton);
+	    	    	add(radioButton);
 	    	    	count++;
 	    		}
 	    	}else if(wybor.getQuestionType() == QuestionType.YESNO){
 	    		radioGroup = new ButtonGroup();
 	    		JRadioButton radioButtonYes = new JRadioButton("Tak");
 	    		radioButtonYes.setBounds(25, 70, 50, 20);
+	    		radioGroup.add(radioButtonYes);
+	    		add(radioButtonYes);
+	    		radioButtonList.add(radioButtonYes);
 	    		
 	    		JRadioButton radioButtonNo = new JRadioButton("Nie", true);
 	    		radioButtonNo.setBounds(25, 95, 50, 20);	    		
-	    		radioGroup.add(radioButtonYes);
 	    		radioGroup.add(radioButtonNo);
-	    		
-	    		add(radioButtonYes);
 	    		add(radioButtonNo);
-    	    	radioButtonList.add(radioButtonYes);
     	    	radioButtonList.add(radioButtonNo);
 	    	}
     		setVisible(true);
@@ -238,7 +233,6 @@ public class DroolsTest {
     	
     	@Override
     	public void actionPerformed(ActionEvent e) {
-    		
     		Object source = e.getSource();
     		if(QuestionType == QuestionType.SIMPLECHOICE){
     			for(JRadioButton i :radioButtonList){
