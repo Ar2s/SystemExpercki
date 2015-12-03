@@ -26,8 +26,6 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 		
 
-
-
 public class DroolsTest {
 	private static Display display;
 	private static Window window;
@@ -40,7 +38,7 @@ public class DroolsTest {
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
 
-            display = new Display("Witaj.", QuestionType.NONE);
+            display = new Display("Za³ó¿ tiarê, i odpowiadaj na pytania, wtedy Ci pomo¿e.", QuestionType.NONE);
             window = new Window(display);
            
             ksession.insert(display);
@@ -56,44 +54,44 @@ public class DroolsTest {
             ksession.fireAllRules();
             boolean t = true;
             while(t){
-            	QueryResults results = ksession.getQueryResults( "Wyswietl" );
+            	QueryResults results = ksession.getQueryResults( "Display" );
             	for ( QueryResultsRow row : results ) {
             		display = (Display) row.get("display");
             	}
-            	window.dispose(); 
             	
             	if (display.resultBool == true){
             		display = new Display("Wynik: " + display.result, QuestionType.NONE);
            		 	break;
             	}
 
-            	window = new Window(display);
+            	window.Refresh(display);
             	while(next == false){
 				    try {
-				       Thread.sleep(200);
+				       Thread.sleep(100);
 				    } catch(InterruptedException ex) {
 				    	t = false;
 				    }
 				}
             	
-        		if(window.QuestionType == QuestionType.RADIOBUTTON){
+        		if(window.QuestionType == QuestionType.SIMPLECHOICE){
         			attribute = new Attribute(display.result + answer);
+        			System.out.println(attribute.tresc);
         			ksession.insert(attribute);
         		}else if(window.QuestionType == QuestionType.YESNO){
-        			for(JRadioButton i :window.radia){
+        			for(JRadioButton i :window.radioButtonList){
         				if ((i.isSelected())&& i.getText() == "Tak"){
         					attribute = new Attribute(display.result);
         					System.out.println(attribute.tresc);
         					ksession.insert(attribute);
         				}
         			}
-        		}else if(window.QuestionType == QuestionType.WIELOKROTYN){
+        		}else if(window.QuestionType == QuestionType.MULTICHOICE){
         			for(JCheckBox i : window.checkBox)
         			{
         				if(i.isSelected())
         				{
         					attribute = new Attribute(display.result+i.getText());
-        					
+        					System.out.println(attribute.tresc);
         					ksession.insert(attribute);
         				}
         			
@@ -104,8 +102,8 @@ public class DroolsTest {
 	            ksession.fireAllRules();
             }
            
-            window = new Window(display);
-            window.notkolejne();
+            window.Refresh(display);
+            window.hidebutton();
             logger.close();
                        
         } catch (Throwable t) {
@@ -129,7 +127,7 @@ public class DroolsTest {
         return kbase;
     }
     
-    public static enum QuestionType {RADIOBUTTON, WIELOKROTYN, NONE,YESNO};
+    public static enum QuestionType {SIMPLECHOICE, MULTICHOICE, NONE,YESNO};
     public static boolean next;
     public static String answer;
         
@@ -153,11 +151,18 @@ public class DroolsTest {
     	public List<JCheckBox> checkBox;
     	private JCheckBox option;
     	private ButtonGroup radioGroup;
-    	public List<JRadioButton> radia;
+    	public List<JRadioButton> radioButtonList;
     	private QuestionType QuestionType;
     	
     	public Window(Display wybor){
     		super("Wybór rasy i klasy");
+    		
+        	this.Refresh(wybor);
+        	setLocation(Toolkit.getDefaultToolkit().getScreenSize().width/2 - 250, Toolkit.getDefaultToolkit().getScreenSize().height/2 - 300);
+    		setSize(600, 600); 
+    	}
+    	
+    	public void Refresh(Display wybor){
         	setLayout(null);
         	try {
         		setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("image/tiara.bmp")))));
@@ -165,9 +170,10 @@ public class DroolsTest {
         	catch (IOException e) {
         		e.printStackTrace();
         	}
+        	
     		next = false;
     		QuestionType = wybor.getQuestionType();
-    		radia = new ArrayList<JRadioButton>();
+    		radioButtonList = new ArrayList<JRadioButton>();
     		checkBox = new ArrayList<JCheckBox>();
     		Question =  new JLabel("<html><span style='font-size:15px;color:blue;font-family:courier;'>"+wybor.getQuestion()+"</span></html>");
     		Question.setBounds(15, 10, 500, 60);
@@ -178,11 +184,11 @@ public class DroolsTest {
     		add(nextButton);
 
 	    	
-	    	 if(wybor.getQuestionType() == QuestionType.WIELOKROTYN)
+	    	 if(wybor.getQuestionType() == QuestionType.MULTICHOICE)
 	    	{
 	    		JPanel panel = new JPanel();
 	    		int count = 0 ;
-	    		for (String i : wybor.warianty)
+	    		for (String i : wybor.variants)
 	    		{
 	    			option  =new JCheckBox(i);
 	    			checkBox.add(option);
@@ -192,10 +198,10 @@ public class DroolsTest {
 	    			count++;
 	    		}
 	    	
-	    	}else if(wybor.getQuestionType() == QuestionType.RADIOBUTTON){
+	    	}else if(wybor.getQuestionType() == QuestionType.SIMPLECHOICE){
 	    		radioGroup = new ButtonGroup();
 	    		int count = 0;
-	    		for(String i :wybor.warianty){
+	    		for(String i :wybor.variants){
 	    	    	JRadioButton radio;
 	    	    	if(count == 0){
 	    	    		radio = new JRadioButton(i, true);
@@ -204,33 +210,30 @@ public class DroolsTest {
 	    	    	}
 	    	    	radio.setBounds(25, 70+25*count, 200, 20);
 	    	    	radioGroup.add(radio);
-	    	    	radia.add(radio);
+	    	    	radioButtonList.add(radio);
 	    	    	add(radio);
 	    	    	count++;
 	    		}
 	    	}else if(wybor.getQuestionType() == QuestionType.YESNO){
 	    		radioGroup = new ButtonGroup();
-	    		JRadioButton radio1 = new JRadioButton("Tak");
-	    		radio1.setBounds(25, 70, 50, 20);
+	    		JRadioButton radioButtonYes = new JRadioButton("Tak");
+	    		radioButtonYes.setBounds(25, 70, 50, 20);
 	    		
-	    		JRadioButton radio2 = new JRadioButton("Nie", true);
-	    		radio2.setBounds(25, 95, 50, 20);	    		
-	    		radioGroup.add(radio1);
-	    		radioGroup.add(radio2);
+	    		JRadioButton radioButtonNo = new JRadioButton("Nie", true);
+	    		radioButtonNo.setBounds(25, 95, 50, 20);	    		
+	    		radioGroup.add(radioButtonYes);
+	    		radioGroup.add(radioButtonNo);
 	    		
-	    		add(radio1);
-	    		add(radio2);
-    	    	radia.add(radio1);
-    	    	radia.add(radio2);
+	    		add(radioButtonYes);
+	    		add(radioButtonNo);
+    	    	radioButtonList.add(radioButtonYes);
+    	    	radioButtonList.add(radioButtonNo);
 	    	}
-	
-	    	pack();
     		setVisible(true);
-    		setLocation(Toolkit.getDefaultToolkit().getScreenSize().width/2 - 250, Toolkit.getDefaultToolkit().getScreenSize().height/2 - 300);
     		setSize(600, 600); 
     	}
     	
-    	public void notkolejne(){
+    	public void hidebutton(){
     		nextButton.setVisible(false);
     	}
     	
@@ -238,8 +241,8 @@ public class DroolsTest {
     	public void actionPerformed(ActionEvent e) {
     		
     		Object source = e.getSource();
-    		if(QuestionType == QuestionType.RADIOBUTTON){
-    			for(JRadioButton i :radia){
+    		if(QuestionType == QuestionType.SIMPLECHOICE){
+    			for(JRadioButton i :radioButtonList){
     				if (i.isSelected()) {
         				answer = i.getText();
     				}
@@ -247,15 +250,14 @@ public class DroolsTest {
     		}
     		if(source == nextButton){
     			next = true;			
-    		}
-    			
+    		}		
     	}
     }
     	
     public static class Display{
     	private String question;
     	private QuestionType QuestionType;
-    	private List<String> warianty;
+    	private List<String> variants;
     	private String result;
     	private boolean resultBool;
 
@@ -274,7 +276,7 @@ public class DroolsTest {
     		this.question = question;
     		this.QuestionType = QuestionType;
     		this.resultBool = false;
-    		this.warianty = new ArrayList<String>();
+    		this.variants = new ArrayList<String>();
     	}
 
     	public void setResult(String question, String result, QuestionType QuestionType){
@@ -282,12 +284,12 @@ public class DroolsTest {
     		this.QuestionType = QuestionType;
     		this.result = result;
     	}
-    	public void setResult(String question, String result, QuestionType QuestionType, List<String> warianty){
+    	public void setResult(String question, String result, QuestionType QuestionType, List<String> variants){
     		this.question = question;
     		this.QuestionType = QuestionType;
     		this.result = result;
-    		this.warianty.clear();
-    		this.warianty = warianty;
+    		this.variants.clear();
+    		this.variants = variants;
     	}
     }     
 }

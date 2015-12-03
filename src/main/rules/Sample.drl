@@ -32,11 +32,11 @@ rule "WielkoscDwa" salience 2
     	not Question (tekst == "WielkoscDwa");
     then
     	insert(new Question ("WielkoscDwa"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("Ma³y");
-    		warianty.add("Du¿y");
-    		warianty.add("Wielki");
-        w.setResult ("Jak du¿y chcia³byœ byæ?", "", QuestionType.RADIOBUTTON, warianty);
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Ma³y");
+    		variants.add("Du¿y");
+    		variants.add("Wielki");
+        w.setResult ("Jak du¿y chcia³byœ byæ?", "", QuestionType.SIMPLECHOICE, variants);
     	retract(w);
 end
 
@@ -55,15 +55,15 @@ end
 rule "WiekDwa" salience 2
     when
     	w : Display();
-    	Attribute (tresc == "Wielkosc");
-    	not Question (tekst == "WielkoscDwa");
+    	Attribute (tresc == "Wiek");
+    	not Question (tekst == "WiekDwa");
     then
-    	insert(new Question ("WielkoscDwa"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("M³oda");
-    		warianty.add("W œrednim wieku");
-    		warianty.add("Stara");
-        w.setResult ("Jaki wiek twojej postac preferujesz?", "", QuestionType.RADIOBUTTON, warianty);
+    	insert(new Question ("WiekDwa"));
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("M³oda");
+    		variants.add("W œrednim wieku");
+    		variants.add("Stara");
+        w.setResult ("Jaki wiek twojej postac preferujesz?", "", QuestionType.SIMPLECHOICE, variants);
     	retract(w);
 end
 
@@ -84,16 +84,16 @@ rule "Bron" salience 2
     	not Question (tekst == "Bron");
     then
     	insert(new Question ("Bron"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("Miecz");
-    		warianty.add("Kostur");
-    		warianty.add("Topór");
-    		warianty.add("£uk");
-    		warianty.add("Kusza");
-    		warianty.add("Pistolet");
-    		warianty.add("Sztylety");
-    		warianty.add("Maczuga");
-        w.setResult ("Jakie bronie lubisz?", "",  QuestionType.WIELOKROTYN, warianty);
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Miecz");
+    		variants.add("Kostur");
+    		variants.add("Topór");
+    		variants.add("£uk");
+    		variants.add("Kusza");
+    		variants.add("Pistolet");
+    		variants.add("Sztylety");
+    		variants.add("Maczuga");
+        w.setResult ("Jakie bronie lubisz?", "",  QuestionType.MULTICHOICE, variants);
     	retract(w);
 end
 
@@ -114,11 +114,11 @@ rule "WszechstronnyDwa" salience 2
     	not Question (tekst == "WszechstronnyDwa");
     then
     	insert(new Question ("WszechstronnyDwa"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("Inteligencja");
-    		warianty.add("Spryt");
-    		warianty.add("Si³a");
-        w.setResult ("Jaki atrybut  jest dla Ciebie najwa¿niejsza?", "", QuestionType.YESNO);
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Inteligencja");
+    		variants.add("Spryt");
+    		variants.add("Si³a");
+        w.setResult ("Jaki cecha jest dla Ciebie najwa¿niejsza?", "", QuestionType.YESNO);
     	retract(w);
 end
 
@@ -130,7 +130,7 @@ rule "Zaklecia" salience 1
     	not Question (tekst == "Zaklecia");
     then
     	insert(new Question ("Zaklecia"));
-        w.setResult ("Czy chcesz uzywac zaklec?", "Zaklecia", QuestionType.YESNO);
+        w.setResult ("Czy chcesz u¿ywac zaklêæ?", "Zaklecia", QuestionType.YESNO);
     	retract(w);
 end
 
@@ -142,12 +142,12 @@ rule "ZakleciaDwa" salience 2
     	not Question (tekst == "ZakleciaDwa");
     then
     	insert(new Question ("ZakleciaDwa"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("Lecznicze");
-    		warianty.add("Wojenne");
-    		warianty.add("Kl¹twy");
-    		warianty.add("Wspieraj¹ce");
-        w.setResult ("Jakie zaklêcia wolisz?", "Zaklecia", QuestionType.RADIOBUTTON, warianty);
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Lecznicze");
+    		variants.add("Wojenne");
+    		variants.add("Kl¹twy");
+    		variants.add("Wspieraj¹ce");
+        w.setResult ("Jakie zaklêcia wolisz?", "Zaklecia", QuestionType.SIMPLECHOICE, variants);
     	retract(w);
 end
 
@@ -169,14 +169,14 @@ rule "KolorDwa" salience 2
     	not Question (tekst == "KolorDwa");
     then
     	insert(new Question ("KolorDwa"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("Ró¿owy");
-    		warianty.add("Zielony");
-    		warianty.add("Czarny");
-    		warianty.add("Bia³y");
-    		warianty.add("Czerwony");
-    		warianty.add("Inny");
-        w.setResult ("Jaki jest twój ulubiony kolor?", "Kolor", QuestionType.RADIOBUTTON, warianty);
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Ró¿owy");
+    		variants.add("Zielony");
+    		variants.add("Czarny");
+    		variants.add("Bia³y");
+    		variants.add("Czerwony");
+    		variants.add("Inny");
+        w.setResult ("Jaki jest twój ulubiony kolor?", "Kolor", QuestionType.SIMPLECHOICE, variants);
         retract(w);
 end
 
@@ -186,7 +186,7 @@ rule "Siedziba" salience 1
     	not Question (tekst == "Siedziba");
     then
     	insert(new Question ("Siedziba"));
-        w.setResult ("Czy chcesz miec sta³¹ siedzibê?", "Siedziba", QuestionType.YESNO);
+        w.setResult ("Czy chcesz mieæ sta³¹ siedzibê?", "Siedziba", QuestionType.YESNO);
     	retract(w);
 end
 
@@ -197,13 +197,13 @@ rule "SiedzibaDwa" salience 2
     	not Question (tekst == "SiedzibaDwa");
     then
     	insert(new Question ("SiedzibaDwa"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("W chacie");
-    		warianty.add("W lesie");
-    		warianty.add("W grocie");
-    		warianty.add("W wie¿y");
-    		warianty.add("W domu");
-        w.setResult ("Gdzie chcia³byœ zamieszkaæ?", "", QuestionType.RADIOBUTTON, warianty);
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("W chacie");
+    		variants.add("W lesie");
+    		variants.add("W grocie");
+    		variants.add("W wie¿y");
+    		variants.add("W domu");
+        w.setResult ("Gdzie chcia³byœ zamieszkaæ?", "", QuestionType.SIMPLECHOICE, variants);
     	retract(w);
 end
 
@@ -224,14 +224,14 @@ rule "PancerzDwa" salience 2
     	not Question (tekst == "PancerzDwa");
     then
     	insert(new Question ("PancerzDwa"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("Ciê¿ka zbroja");
-    		warianty.add("He³m z rogami");
-    		warianty.add("Tarcza");
-    		warianty.add("Lekka zbroja");
-    		warianty.add("Skórzana zbroja");
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Ciê¿ka zbroja");
+    		variants.add("He³m z rogami");
+    		variants.add("Tarcza");
+    		variants.add("Lekka zbroja");
+    		variants.add("Skórzana zbroja");
     		
-        w.setResult ("Jaki pancerz?", "", QuestionType.WIELOKROTYN, warianty);
+        w.setResult ("Jaki pancerz?", "", QuestionType.MULTICHOICE, variants);
     	retract(w);
 end
 
@@ -286,12 +286,12 @@ rule "ZwierzeTrzy" salience 3
     	not Question (tekst == "ZwierzeTrzy");
     then
     	insert(new Question ("ZwierzeTrzy"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("Konia");
-    		warianty.add("Wilka");
-    		warianty.add("Kruka");
-    		warianty.add("Sowê");
-        w.setResult ("Jakie zwierzê chcia³byœ mieæ?", "",  QuestionType.RADIOBUTTON, warianty);
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Konia");
+    		variants.add("Wilka");
+    		variants.add("Kruka");
+    		variants.add("Sowê");
+        w.setResult ("Jakie zwierzê chcia³byœ mieæ?", "",  QuestionType.SIMPLECHOICE, variants);
     	retract(w);
 end
 
@@ -312,7 +312,7 @@ rule "Piekny"
     	not Question (tekst == "Piekny");
     then
     	insert(new Question ("Piekny"));
-        w.setResult ("Czy chcesz byæ piêkny?", "Piekny", QuestionType.YESNO);
+        w.setResult ("Czy chcesz byæ ³adny?", "Piekny", QuestionType.YESNO);
     	retract(w);
 end
 
@@ -322,15 +322,15 @@ rule "Hobby"
     	not Question (tekst == "Hobby");
     then
     	insert(new Question ("Hobby"));
-    	List<String> warianty = new ArrayList<String>();
-    		warianty.add("Ksiêgi");
-    		warianty.add("Zabawa");
-    		warianty.add("Mechanizmy");
-    		warianty.add("Zielarstwo");
-    		warianty.add("Numizmatyka");
-    		warianty.add("Zbieranie kamieni");
-    		warianty.add("Zbieranie wszystkiego");
-        w.setResult ("Jakie jest Twoje hobby?", "",  QuestionType.WIELOKROTYN, warianty);
+    	List<String> variants = new ArrayList<String>();
+    		variants.add("Ksiêgi");
+    		variants.add("Zabawa");
+    		variants.add("Mechanizmy");
+    		variants.add("Zielarstwo");
+    		variants.add("Numizmatyka");
+    		variants.add("Zbieranie kamieni");
+    		variants.add("Zbieranie wszystkiego");
+        w.setResult ("Jakie jest Twoje hobby?", "",  QuestionType.MULTICHOICE, variants);
     	retract(w);
 end
 
@@ -365,7 +365,7 @@ rule "Wynalazki"
 end
 /* 
 					 Postacie
-						23 
+						26 
 */
 
 // ******************Ludzie*********************
@@ -380,7 +380,7 @@ rule "Mag" salience 3
 		Attribute ( tresc == "Sowê");
 		Attribute ( tresc == "Ksiêgi");
     then
-    	w.setResult ("Mag", true);        
+    	w.setResult ("Mag.", true);        
     	retract(w);
 end
 
@@ -398,7 +398,7 @@ rule "Wojownik" salience 3
 		Attribute ( tresc == "W chacie");
 		Attribute ( tresc == "Ciê¿ka zbroja");
     then
-    	w.setResult ("Wojownik", true);        
+    	w.setResult ("Wojownik.", true);        
     	retract(w);
 end
 
@@ -420,7 +420,7 @@ rule "Paladyn" salience 3
 		Attribute ( tresc == "Dobry");
 		Attribute ( tresc == "Szybki");
 	then
-	w.setResult ("Paladyn", true);        
+	w.setResult ("Paladyn.", true);        
     	retract(w)
 end
 
@@ -438,20 +438,21 @@ rule "£otrzyk" salience 3
 		Attribute ( tresc == "Numizmatyka");
 		Attribute ( tresc == "Szybki");
     then
-    	w.setResult ("£otrzyk", true);        
+    	w.setResult ("£otrzyk.", true);        
     	retract(w);
 end
 
 rule "Strzelec" salience 3
 	when
 		w : Display();
-    	Attribute ( tresc == "M³oda");
-		Attribute ( tresc == "Pistolet");
-		Attribute ( tresc == "W chacie");
-		Attribute ( tresc == "Lekka zbroja");
-		Attribute ( tresc == "Skórzana zbroja");
+    		Attribute ( tresc == "Pistolet");
+			Attribute ( tresc == "Pistolet");
+	    	Attribute ( tresc == "M³oda");
+			Attribute ( tresc == "W chacie");
+			Attribute ( tresc == "Lekka zbroja");
+			Attribute ( tresc == "Skórzana zbroja");
     then
-    	w.setResult ("Strzelec", true);        
+    	w.setResult ("Strzelec.", true);        
     	retract(w);
 end
 
@@ -467,7 +468,7 @@ rule "In¿ynier" salience 3
 		Attribute ( tresc == "Dobry");
 		Attribute ( tresc == "Wynalazki");
     then
-    	w.setResult ("In¿ynier", true);        
+    	w.setResult ("In¿ynier.", true);        
     	retract(w);
 end
 
@@ -483,7 +484,7 @@ rule "Mieszczanin" salience 3
 			Attribute ( tresc == "Ksiêgi");
 		)
     then
-    	w.setResult ("Mieszczanin", true);        
+    	w.setResult ("Mieszczanin.", true);        
     	retract(w);
 end
 
@@ -503,7 +504,7 @@ rule "Mnich" salience 3
 		Attribute ( tresc == "Uczciwy");
 		Attribute ( tresc == "Zwierze");
     then
-    	w.setResult ("Mnich", true);        
+    	w.setResult ("Mnich.", true);        
     	retract(w);
 end
 // *******************Orki*********************
@@ -523,7 +524,7 @@ rule "Barbarzynca" salience 3
 		Attribute ( tresc == "Numizmatyka");
 		Attribute ( tresc == "Mieso");
     then
-    	w.setResult ("Barbarzynca", true);        
+    	w.setResult ("Barbarzynca.", true);        
     	retract(w);
 end
 
@@ -540,7 +541,7 @@ rule "Szaman" salience 3
 		Attribute ( tresc == "Ksiêgi");
 		Attribute ( tresc == "Mieso");
     then
-    	w.setResult ("Szaman", true);        
+    	w.setResult ("Szaman.", true);        
     	retract(w);
 end
 
@@ -556,7 +557,7 @@ rule "£owca" salience 3
 		Attribute ( tresc == "Lekka zbroja");
 		Attribute ( tresc == "Wilka");
     then
-    	w.setResult ("£owca", true);        
+    	w.setResult ("£owca.", true);        
     	retract(w);
 end
 
@@ -578,7 +579,7 @@ rule "Jezdziec Wilkow" salience 3
     	Attribute ( tresc == "Wilka");
     	Attribute ( tresc == "Szybki");
     then
-    	w.setResult ("Jezdziec Wilkow", true);        
+    	w.setResult ("JeŸdziec Wilkow.", true);        
     	retract(w);
 end
 
@@ -591,7 +592,7 @@ rule "Olbrzym" salience 3
     	Attribute ( tresc == "W grocie");
     	Attribute ( tresc == "Zieranie kamieni");
     then
-    	w.setResult ("Olbrzym", true);        
+    	w.setResult ("Olbrzym.", true);        
     	retract(w);
 end
 
@@ -609,7 +610,7 @@ rule "Gremlin" salience 3
     	Attribute ( tresc == "Lekka zbroja");
     	Attribute ( tresc == "Zbieranie wszystkiego");
     then
-    	w.setResult ("Gremlin", true);        
+    	w.setResult ("Gremlin.", true);        
     	retract(w);
 end
 
@@ -632,7 +633,7 @@ rule "Uzdrowicie;" salience 3
     	Attribute ( tresc == "Dobry");
     	Attribute ( tresc == "Wegetarianin");
     then
-    	w.setResult ("Uzdrowiciel", true);        
+    	w.setResult ("Uzdrowiciel.", true);        
     	retract(w);
 end
 
@@ -646,7 +647,7 @@ rule "Bard" salience 3
     	Attribute ( tresc == "Zabawa");
     	Attribute ( tresc == "Wegetarianin");
     then
-    	w.setResult ("Bard", true);        
+    	w.setResult ("Bard.", true);        
     	retract(w);
 end
 
@@ -664,7 +665,7 @@ rule "£ucznik" salience 3
     	Attribute ( tresc == "Uczciwy");
     	Attribute ( tresc == "Szybki");
     then
-    	w.setResult ("£ucznik", true);        
+    	w.setResult ("£ucznik.", true);        
     	retract(w);
 end
 
@@ -684,7 +685,7 @@ rule "Assasyn" salience 3
     	Attribute ( tresc == "Lekka zbroja");
     	Attribute ( tresc == "Szybki");
     then
-    	w.setResult ("Assasyn", true);        
+    	w.setResult ("Assasyn.", true);        
     	retract(w);
 end
 
@@ -703,7 +704,7 @@ rule "Druid" salience 3
     	Attribute ( tresc == "Dobry");
     	Attribute ( tresc == "Wegetarianin");
     then
-    	w.setResult ("Druid", true);        
+    	w.setResult ("Druid.", true);        
     	retract(w);
 end
 
@@ -724,7 +725,7 @@ rule "Mêdrzec" salience 3
     	Attribute ( tresc == "Zielarstwo");
     	Attribute ( tresc == "Wegetarianin");
     then
-    	w.setResult ("Mêdrzec", true);        
+    	w.setResult ("Mêdrzec.", true);        
     	retract(w);
 end
 
@@ -750,7 +751,7 @@ rule "Dragonborn" salience 3
 		Attribute ( tresc == "Szybki");
 		
     then
-    	w.setResult ("Dragonborn", true);        
+    	w.setResult ("Dragonborn.", true);        
     	retract(w);
 end
  
@@ -765,7 +766,7 @@ rule "Z³odziej" salience 3
 		Attribute ( tresc == "Numizmatyka ");
 		Attribute ( tresc == "Wynalazki");
 	then
-		w.setResult ("WiedŸmin",true);	
+		w.setResult ("WiedŸmin.",true);	
 		retract(w);
 end
 
@@ -779,7 +780,7 @@ rule "Pijak" salience 3
 		Attribute ( tresc == "Zbieranie wszystkiego");
 		not Attribute ( tresc == "Szybki");
 	then
-		w.setResult ("Pijak",true);	
+		w.setResult ("Pijak.",true);	
 		retract(w);
 end
 
@@ -798,7 +799,7 @@ rule "WiedŸmin" salience 3
 		Attribute ( tresc == "Zielarstwo");
 		Attribute ( tresc == "Szybki");
     then
-    	w.setResult ("WiedŸmin", true);        
+    	w.setResult ("WiedŸmin.", true);        
     	retract(w);
 end
 
@@ -808,7 +809,7 @@ rule "Brak dopasowania, graj magiem" salience -1
 		Attribute ();
 		
     then
-    	w.setResult ("Brak dopasowania, zagraj magiem, bêdzie fajnie", true);        
+    	w.setResult ("Brak dopasowania, zagraj magiem, bêdzie fajnie :)", true);        
     	retract(w);
 end
 
@@ -816,6 +817,6 @@ rule "Czego chcesz" salience -2
 	when
 		w : Display();
     then
-    	w.setResult ("Nie wiesz czego chcesz, nie wybra³eœ ¿adnego atrybutu.", true);        
+    	w.setResult ("Nie wiesz czego chcesz!", true);        
     	retract(w);
 end
