@@ -8,13 +8,13 @@ query "Display"
     w : Display();
 end
 
-// ************************************
-//			PYTANIA
-//		10 pytañ g³ownych, 11 szczegó³oweych i 6 ogolnych
-// ************************************
+/* 
+		PYTANIA
+		10 pytañ g³ownych, 11 szczegó³oweych i 6 ogolnych
+*/
 
 
-// pytania wynikaj¹ce z innych maj¹ wy¿szy prioritet, aby zaraz potem siê zada³y
+
 rule "Wielkosc" salience 1
     when
     	w : Display();
@@ -202,6 +202,7 @@ rule "SiedzibaDwa" salience 2
     		warianty.add("W lesie");
     		warianty.add("W grocie");
     		warianty.add("W wie¿y");
+    		warianty.add("W domu");
         w.setResult ("Gdzie chcia³byœ zamieszkaæ?", "", QuestionType.RADIOBUTTON, warianty);
     	retract(w);
 end
@@ -362,10 +363,10 @@ rule "Wynalazki"
         w.setResult ("Czy lubisz gad¿ety/wynalazki?", "Wynalazki", QuestionType.YESNO);
     	retract(w);
 end
-// ************************************
-//			 Rasy i Klasy 
-//				22 klasy
-// ************************************
+/* 
+					 Postacie
+						23 
+*/
 
 // ******************Ludzie*********************
 rule "Mag" salience 3
@@ -454,14 +455,14 @@ rule "Strzelec" salience 3
     	retract(w);
 end
 
-rule "In¿yniert" salience 3
+rule "In¿ynier" salience 3
 	when
 		w : Display();
     	Attribute ( tresc == "Ma³y");
 		not Attribute ( tresc == "Walczy");
 		Attribute ( tresc == "W œrednim wieku");
 		Attribute ( tresc == "Inteligencja");
-		Attribute ( tresc == "W chacie");
+		Attribute ( tresc == "W domu");
 		Attribute ( tresc == "Mechanizmy");
 		Attribute ( tresc == "Dobry");
 		Attribute ( tresc == "Wynalazki");
@@ -470,8 +471,41 @@ rule "In¿yniert" salience 3
     	retract(w);
 end
 
+rule "Mieszczanin" salience 3
+	when
+		w : Display();
+		not Attribute ( tresc == "Walczy");
+		Attribute ( tresc == "W œrednim wieku");
+		Attribute ( tresc == "Wszechstronny");
+		Attribute ( tresc == "W domu");
+		(or
+			Attribute ( tresc == "Zabawa");
+			Attribute ( tresc == "Ksiêgi");
+		)
+    then
+    	w.setResult ("Mieszczanin", true);        
+    	retract(w);
+end
 
-
+rule "Mnich" salience 3
+	when
+		w : Display();
+		not Attribute ( tresc == "Walczy");
+		(or
+			Attribute ( tresc == "Ksiêgi");
+			Attribute ( tresc == "Zielarstwo");
+		)
+		(or
+			Attribute ( tresc == "ZakleciaLecznicze");
+			Attribute ( tresc == "ZakleciaWspieraj¹ce");
+		)
+		Attribute ( tresc == "Dobry");
+		Attribute ( tresc == "Uczciwy");
+		Attribute ( tresc == "Zwierze");
+    then
+    	w.setResult ("Mnich", true);        
+    	retract(w);
+end
 // *******************Orki*********************
 rule "Barbarzynca" salience 3
 	when
@@ -487,6 +521,7 @@ rule "Barbarzynca" salience 3
 		Attribute ( tresc == "Skórzana zbroja");
 		not Attribute ( tresc == "Uczciwy");
 		Attribute ( tresc == "Numizmatyka");
+		Attribute ( tresc == "Mieso");
     then
     	w.setResult ("Barbarzynca", true);        
     	retract(w);
@@ -503,6 +538,7 @@ rule "Szaman" salience 3
 		Attribute ( tresc == "Lekka zbroja");
 		Attribute ( tresc == "Kruka");
 		Attribute ( tresc == "Ksiêgi");
+		Attribute ( tresc == "Mieso");
     then
     	w.setResult ("Szaman", true);        
     	retract(w);
@@ -594,6 +630,7 @@ rule "Uzdrowicie;" salience 3
     	Attribute ( tresc == "Ksiêgi");
     	Attribute ( tresc == "Zielarstwo");
     	Attribute ( tresc == "Dobry");
+    	Attribute ( tresc == "Wegetarianin");
     then
     	w.setResult ("Uzdrowiciel", true);        
     	retract(w);
@@ -607,6 +644,7 @@ rule "Bard" salience 3
     	Attribute ( tresc == "KolorRó¿owy");
     	Attribute ( tresc == "Konia");
     	Attribute ( tresc == "Zabawa");
+    	Attribute ( tresc == "Wegetarianin");
     then
     	w.setResult ("Bard", true);        
     	retract(w);
@@ -663,6 +701,7 @@ rule "Druid" salience 3
     	)
     	Attribute ( tresc == "Uczciwy");
     	Attribute ( tresc == "Dobry");
+    	Attribute ( tresc == "Wegetarianin");
     then
     	w.setResult ("Druid", true);        
     	retract(w);
@@ -683,6 +722,7 @@ rule "Mêdrzec" salience 3
     	Attribute ( tresc == "Uczciwy");
     	Attribute ( tresc == "Ksiêgi");
     	Attribute ( tresc == "Zielarstwo");
+    	Attribute ( tresc == "Wegetarianin");
     then
     	w.setResult ("Mêdrzec", true);        
     	retract(w);
@@ -759,5 +799,23 @@ rule "WiedŸmin" salience 3
 		Attribute ( tresc == "Szybki");
     then
     	w.setResult ("WiedŸmin", true);        
+    	retract(w);
+end
+
+rule "Brak dopasowania, graj magiem" salience -1
+	when
+		w : Display();
+		Attribute ();
+		
+    then
+    	w.setResult ("Brak dopasowania, zagraj magiem, bêdzie fajnie", true);        
+    	retract(w);
+end
+
+rule "Czego chcesz" salience -2
+	when
+		w : Display();
+    then
+    	w.setResult ("Nie wiesz czego chcesz, nie wybra³eœ ¿adnego atrybutu.", true);        
     	retract(w);
 end

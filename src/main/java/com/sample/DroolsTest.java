@@ -1,16 +1,5 @@
 package com.sample;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import java.util.ArrayList;
-
-import javax.imageio.ImageIO;
-import javax.swing.*;
-
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseFactory;
 import org.drools.builder.KnowledgeBuilder;
@@ -25,12 +14,22 @@ import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.rule.QueryResults;
 import org.drools.runtime.rule.QueryResultsRow;
 
-/**
- * This is a sample class to launch a rule.
- */
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+		
+
+
+
 public class DroolsTest {
 	private static Display display;
-	private static String displayOld;
 	private static Window window;
 	
 	private static Attribute attribute;
@@ -64,16 +63,10 @@ public class DroolsTest {
             	window.dispose(); 
             	
             	if (display.resultBool == true){
-            		display = new Display("Preferowana postaæ dla ciebie to: " + display.result, QuestionType.NONE);
+            		display = new Display("Wynik: " + display.result, QuestionType.NONE);
            		 	break;
             	}
-            	
-            	if(display.getQuestion() == displayOld){
-            		display = new Display("Nie ma klasy spe³niaj¹cej twoje wymagania, zagraj magiem, bedzie fajnie :)", QuestionType.NONE);
-            		 break;
-            	}
-            	displayOld = display.getQuestion();
-            	
+
             	window = new Window(display);
             	while(next == false){
 				    try {
@@ -157,7 +150,6 @@ public class DroolsTest {
     public static class Window extends JFrame implements ActionListener{
     	private JButton nextButton;
     	private JLabel Question;
-    	private JComboBox lista;
     	public List<JCheckBox> checkBox;
     	private JCheckBox option;
     	private ButtonGroup radioGroup;
